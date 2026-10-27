@@ -1,6 +1,6 @@
 # Randonee: utstyr og turer
 
-Sist oppdatert: 2026-10-27
+Sist oppdatert: 2026-10-27 (rev. 2)
 
 ## Status
 
@@ -153,6 +153,65 @@ Med V-Crest 12 i stedet for Raider 13 EVO er skipakken ca. 13 547 kr.
 | 9 | Hemsedal / Rondane | Feb–mai | 1–4 | Lett–middels | lav | Trening |
 
 Progresjon: skredkurs i vinter, 1–2 treningshelger (Finse, Hemsedal), Høgruta + Ötztal eller Lyngen i 2027, Haute Route/Berner Oberland som mål i 2028. ATES-nivåer og kostnader er egne estimater. Sjekk at reiseforsikringen dekker topptur og helikopterredning.
+
+## Høgruta: etapper (Friflyt-guide, oppdatert 3.4.2025)
+
+94 km og ca. 7 500 høydemeter på 5–6 dager. Start Bessheim eller Gjendesheim, slutt Krossbu.
+
+| Dag | Etappe | Km | Opp | Ned | Merknad |
+|---|---|---|---|---|---|
+| 1 | Bessheim/Gjendesheim – Besshø (2258) – Memurubu | 16 | 1 200 | 1 200 | Rennene på sørsiden steinete, frarådes på hard snø |
+| 2 | Memurubu – Surtningssue (2368) – Glitterheim | 20 | 1 507 | 1 185 | Lengste dag. Alternativ via Russvatnet ved sterk vind |
+| 3 | Glitterheim – Glittertind (2464) – Spiterstulen | 15 | 1 080 | 1 360 | Snilleste oppstigning, best nedkjøring |
+| 4 | Spiterstulen – Leirvassbu | 16 | 1 350 | 1 050 | Tyngst. Tverråbrean/Bukkeholsbandet/Leirløyfte, eller over Galdhøpiggen (ca. 2 000 m ned). Bre: sprekkefare |
+| 5 | Leirvassbu – Storebjørn (2222) – Krossbu | 15 | 950 | 1 050 | Bratt toppflanke |
+
+Hytter: Bessheim/Gjendesheim, Memurubu, Glitterheim, Spiterstulen, Leirvassbu, Krossbu. Sesong mars–mai (pudder «ut i mai»). Kjøp boka «Høgruta i Jotunheimen» (Fri Flyt, Stian Hagen) på friflytbestill.no: dag-for-dag, pakkelister, kart, rutealternativer.
+
+### Skibredde: Friflyt sier ca. 90 mm til Høgruta
+
+Friflyt-guiden: «det ideelle vil være rundt 90 mm under fot og normale randostøvler». M-Tour 100 er bredere enn idealet, men lett (1 430 g) og best i test på hard snø, og dekker også pudder/jakt. Hvis Høgruta er hovedbruken og pudder er sjeldent: Head Crux Pro 93 (1 330 g, 9/10, opp 9) eller Dynafit Ridge 95 ligger nærmere. Avveining, ikke fasit.
+
+Sekk: Friflyt sier 2–3 kg ekstra merkes tydelig. Mål under 10 kg uten vann.
+
+## Brukt-alternativ (Friflyt «Disse skiene kan du trygt kjøpe brukt», 2021/2025)
+
+| Ski | Friflyt | Bredde | Kommentar |
+|---|---|---|---|
+| **K2 Wayback 96** (2019) | Testvinner 2019 | 96 | FINN-paret til 5 000 kr m/Dynafit Radical. Reelt budsjettvalg: ca. 5 800–7 100 kr totalt med frakt og feller |
+| Völkl VTA 98 (2018) | Testvinner 2018 | 98 | Lett, litt nervøs |
+| Black Crows Camox Freebird (2016) | Testvinner 2016 | ca. 97 | Samme oppskrift som dagens 97 |
+| Stereo Wolverine Carbon V2 (2019) | Testvinner 2019 | | Kjørerettet |
+| Hagan Core 89 | Testvinner 2019/20 | 89 | Nær Høgruta-idealet, lite flyt |
+
+Brukt vs. ny: Wayback 96 + Radical ca. 6–7 000 kr mot M-Tour 100 + Raider 13 EVO ca. 16 000 kr (VPG). Sparer ca. 9–10 000 kr, mister garanti og nyere ski. Ved bruktkjøp: bilder av såle/kanter/plugga hull, antall sesonger, planslipt?, Radical-modell (Radical 1 før 2015 hadde tåbindingsproblemer), få binding justert for Maestrale 28.5.
+
+## FINN: søkeord og kategori (Friflyt/Finn.no, sept. 2026)
+
+- Skriv **«toppturski»**, «toppturpakke», «topptursko». «Toppturski» har 22 % av «slalomski»-søkevolumet, «randoneski» under 2 %.
+- Kategori: Skisport → Alpint eller Annet skiutstyr (9 av 10 annonser).
+- Tilbudet av brukt toppturutstyr +40 % på to år, nysalg halvert: kjøpers marked, by under prisantydning.
+- Søk øker brått siste to uker av september; nye annonser jevnt sept.–nov.
+
+Annonsetekst (ønskes kjøpt):
+
+> **Ønskes kjøpt: toppturski 176–179 cm, gjerne toppturpakke**
+>
+> Leter etter toppturski i 176–179 cm, helst Dynastar M-Tour 100, Dynafit Ridge 95, Head Crux Pro 93 eller Black Crows Camox Freebird 97. Ski alene eller pakke med tech-binding (ATK Raider/C-Raider, Dynafit Ridge, Marker Alpinist 12) og feller. Jeg er 181 cm, 88 kg og bruker Scarpa Maestrale 28.5. Pent brukt er fint. Bor i Oslo, kan hente eller få tilsendt. Send pris og bilder av såle og kanter.
+
+## Om Friflyts testmetode
+
+Hovedtester (Tore Meirik) får neste sesongs ski i februar og går toppturer på dem hele vinteren (ca. 600 hm daglig, lengre turer i helgene). Testlaget samles i et par uker (Tyin, Oppdal: skare, sløsj, pudder) før skiene måles. Karakterene bygger altså på en hel sesong pluss panel, ikke én dag.
+
+## Pakkeliste Høgruta (hytte til hytte)
+
+**På kroppen/ski:** ski, binding, feller, Maestrale, staver, hjelm, skredsøker (ferske batterier), skibriller, solbriller kat. 3–4.
+**Sikkerhet:** skuffe, sonde, skarejern, førstehjelp (tape, plaster, kompress, smertestillende, Compeed), rep-sett (multiverktøy m/Pozidriv-Torx, stropper, fellestrips, ståltråd, gaffateip, ekstra bindingsskruer), bivvybag, hodelykt + batterier, kart Jotunheimen 1:50 000 + kompass, telefon m/offline kart, powerbank, ev. inReach, fløyte.
+**Klær:** ullundertøy, tynt mellomlag, skalljakke og -bukse, lett dun/syntetjakke, lue og buff (tynn + tykk), tynne hansker + varme votter, ullsokker 1+1.
+**Hytte:** ullundertøy inne, tights, ekstra undertøy, lakenpose (påbudt), toalettsaker mini, solkrem 30–50, leppepomade, ørepropper, mikrofiberhåndkle.
+**Mat/drikke:** termos 0,75–1 l, Nalgene, dagsmat (nøtter, sjokolade, barer), 1 dag nødrasjon, elektrolytter.
+**Diverse:** DNT-kort og -nøkkel, kort/Vipps, søppelpose, dopapir.
+**Før avreise:** Varsom + vær hele uka, binding testet på støvel, søkertest i gruppa, batterier, feller limt.
 
 ## Må verifiseres før kjøp/booking
 
