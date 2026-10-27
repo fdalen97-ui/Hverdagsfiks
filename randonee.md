@@ -11,7 +11,8 @@ Sist oppdatert: 2026-10-27 (rev. 2)
 | Skredsøker | Ja | |
 | Skuffe | Ja | |
 | Sonde | Nei | **Kjøp 280–300 cm, aluminium** |
-| Ski + binding + feller | Nei | Se anbefaling under |
+| Ski 1 (har) | SGN Tylderingen + Marker Alpinist | Dagstur-ski til påske/vår. Ikke til Høgruta (stoler ikke på den over fem dager; SGN konkurs, ingen deler). Sjekk binding og fellelim før påske |
+| Ski 2 (kjøp) | Nei | Høgruta-ski: M-Tour 100 178 cm + Raider 13 EVO + Free Pro. Monteres og testes på 3–4 dagsturer i jan–feb før Høgruta |
 | Hjelm | Nei | Dobbeltsertifisert (EN 12492 + EN 1077) |
 | Skall | ? | Norrøna lyngen (gjerne brukt) |
 | Skredkurs | Nei | Wild Voss 2 dager, 4 490 kr |
@@ -33,7 +34,7 @@ Forutsetninger: 181 cm, 88 kg, Oslo. Hovedbruk Høgruta (Jotunheimen) og jakttur
 | **VPG (vpg.no)** | M-Tour 100 Open 178 cm forventet på lager **30.11.2026**. Pakke ski + Raider 13 EVO + Free Pro (M) ca. 15 990 kr; med V-Crest 12 ca. 13 547 kr. Bare 1 Raider 13 EVO på lager. Tlf. 72 42 37 61, hei@vpg.no |
 | **Platou Sport** | 178 cm oppført, 5 999 kr (før 6 500). Utsolgt på nett, men Ålesund viste «på lager» |
 | **Lillehammer Sport** | 178 cm oppført, utsolgt. Tlf. 61 27 04 30 |
-| **FINN** | Nytt/uåpnet par 178 cm ca. 6 000 kr (Tromsø); brukt m/binding ca. 9 500 kr |
+| **FINN** | Nytt/uåpnet par 178 cm ca. 6 000 kr (Tromsø); brukt m/binding ca. 9 500 kr. **27.10:** M-Tour 100 «Kun noen få igjen» 6 500 kr Hemsedal (finnkode 429911779, lengde ikke oppgitt), M-Tour 100 6 000 kr Intersport Leira (450269389, fra feb., lengde ikke oppgitt) |
 | Steffen (Milslukern) | Opprinnelig tilbud: M-Tour 94 + V-Crest 12 + Free Pro = 11 500 kr. Spurt om M-Tour 100 i stedet, venter på svar |
 | Utland (evo, Skimo.co, Alpinstore, Sport Conrad) | €690 / $750, utsolgt eller sender ikke til Norge. Med frakt og moms dyrere enn Norge |
 
