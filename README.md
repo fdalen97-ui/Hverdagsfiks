@@ -7,3 +7,4 @@ Personlige notater og beslutningsstøtte.
 - [Bil: Toyota Aygo 2008](bil.md) – feilsøking, bremsejobb, bestillingsliste, ordliste
 - [Mat: hva jeg bør spise mer av](mat.md) – næringstette matvarer, smoothie-oppskrifter, Oda-varer
 - [Bøker: leseliste](bøker.md) – selvutvikling, leserekkefølge, Goodreads
+- [Teams: opprydding i kanaler](teams-kanaler.md) – to do for nye kanalnavn og distriktskanaler til delt
