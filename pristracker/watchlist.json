@@ -1,0 +1,54 @@
+{
+  "innstillinger": {
+    "pause_sek": 3,
+    "valutakurs_til_nok": {
+      "EUR": 11.7,
+      "SEK": 1.0,
+      "DKK": 1.57,
+      "GBP": 14.5,
+      "CHF": 13.3
+    }
+  },
+  "varer": [
+    {
+      "navn": "Skalljakke Bergans Y MountainLine Bold 3L",
+      "kategori": "Skalljakke",
+      "prioritet": 1,
+      "maalpris": 2800,
+      "notat": "Outlet, str. L. Benchmark for ny jakke.",
+      "kilder": [
+        {"butikk": "Bergans", "url": "https://www.bergans.com/no/p/3086-y-mountainline-bold-3l-shell-jacket-men"}
+      ]
+    },
+    {
+      "navn": "Hjelm Sweet Protection Ascender MIPS",
+      "kategori": "Topptur",
+      "prioritet": 1,
+      "maalpris": 1850,
+      "notat": "Str. M/L. Bergzeit er tysk pris uten norsk mva/frakt.",
+      "kilder": [
+        {"butikk": "Bergzeit (DE)", "url": "https://www.bergzeit.de/p/sweet-protection-ascender-mips-skihelm/5037653/"}
+      ]
+    },
+    {
+      "navn": "Hodelykt Petzl Actik Core (rødt lys)",
+      "kategori": "Hodelykt",
+      "prioritet": 2,
+      "maalpris": 700,
+      "kilder": [
+        {"butikk": "Outnorth", "url": "https://www.outnorth.com/no/varemerker/petzl/petzl-actik-core-red-P481-3903"},
+        {"butikk": "Alpinstore", "url": "https://www.alpinstore.com/no/625055-petzl-lampe-actik-core-rd-.html"}
+      ]
+    },
+    {
+      "navn": "Feller Pomoca Tour Explore R2C (referanse)",
+      "kategori": "Topptur",
+      "prioritet": 9,
+      "maalpris": 2000,
+      "notat": "Allerede kjøpt for 2 699 kr. Faller prisen mye før du klipper fellene, kan du vurdere retur.",
+      "kilder": [
+        {"butikk": "Fjellsport", "url": "https://www.fjellsport.no/merker/pomoca/pomoca-tour-explore---r2c-130mm-yellow-FS260067"}
+      ]
+    }
+  ]
+}

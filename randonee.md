@@ -1,21 +1,26 @@
 # Randonee: utstyr og turer
 
-Sist oppdatert: 2026-10-27 (rev. 2)
+Sist oppdatert: 2026-11-09 (rev. 3)
 
 ## Status
 
 | | Har | Mangler / neste steg |
 |---|---|---|
-| Støvler | Scarpa Maestrale 28.5 (BSL ca. 315 mm, ikke verifisert) | La bootfitter sjekke innersko før sesongen |
-| Sekk | Gregory Targhee (størrelse ukjent) | Sjekk at sonde får plass i skredlommen |
-| Skredsøker | Ja | |
-| Skuffe | Ja | |
-| Sonde | Nei | **Kjøp 280–300 cm, aluminium** |
-| Ski 1 (har) | SGN Tylderingen + Marker Alpinist | Dagstur-ski til påske/vår. Ikke til Høgruta (stoler ikke på den over fem dager; SGN konkurs, ingen deler). Sjekk binding og fellelim før påske |
-| Ski 2 (kjøp) | Nei | Høgruta-ski: M-Tour 100 178 cm + Raider 13 EVO + Free Pro. Monteres og testes på 3–4 dagsturer i jan–feb før Høgruta |
-| Hjelm | Nei | Dobbeltsertifisert (EN 12492 + EN 1077) |
-| Skall | ? | Norrøna lyngen (gjerne brukt) |
-| Skredkurs | Nei | Wild Voss 2 dager, 4 490 kr |
+| Ski | **K2 Wayback 96, 177 cm, ubrukt** (kjøpt for 6 000 kr) | |
+| Binding | **ATK Crest 10** (montert for BSL ca. 295 mm, justering ±10 mm) | Les BSL på Maestrale-hælen. Over 305 mm må bindingen monteres på nytt (ca. 1 000–1 200 kr, Jesting/Braasport/Anton). Sett DIN ca. 7–8 |
+| Feller | **Pomoca Tour Explore R2C 120 mm, str. M** (Anton Sport 7.11, 2 699 kr) | Klipp etter Black Friday. Gni inn fellevoks |
+| Sonde | **Mammut Probe 240 Speed Lock** (899 kr) | |
+| Støvler | Scarpa Maestrale 28.5 (BSL ikke verifisert) | Les BSL på hælen |
+| Sekk | Gregory Targhee | Sjekk at sonden får plass i skredlommen |
+| Skredsøker, spade | Ja | |
+| Hjelm | Nei | Sweet Protection Ascender MIPS, målpris 1 500–1 850 kr (Black Week). Se `pristracker/` |
+| Staver | Nei | Målpris 900–1 100 kr (Black Week) |
+| Skall | Nei | Se [skalljakke-rapporten](skalljakke-rapport-2027.md): brukt Arc'teryx Rush (ca. 3 300 kr) eller Bergans Bold 3L (3 099 kr) |
+| Skredkurs | Nei | NF grunnkurs Hemsedal 5 100 kr, 9.–11.1 eller 23.–25.1.2027 |
+| Gammel ski | SGN Tylderingen + Marker Alpinist + G3-feller | Selges, legg ut for 5 500 kr og godta ca. 4 800–5 000 |
+| Anton-bonus | 1 462 kr (gyldig 12 mnd) | Bruk på montering eller hjelm/staver |
+
+Plan for kjøp og datoer: [Black Week-strategi](black-week-2026.md).
 
 Forutsetninger: 181 cm, 88 kg, Oslo. Hovedbruk Høgruta (Jotunheimen) og jaktturer i pudder/variabel snø.
 

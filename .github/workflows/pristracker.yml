@@ -1,0 +1,50 @@
+name: Pristracker
+
+on:
+  schedule:
+    # 06:17 og 16:17 norsk vintertid (UTC+1)
+    - cron: "17 5,15 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: pristracker
+  cancel-in-progress: false
+
+jobs:
+  sjekk-priser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Hent priser
+        run: python3 pristracker/tracker.py
+
+      - name: Lagre prishistorikk og rapport
+        run: |
+          git config user.name "pristracker-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pristracker/RAPPORT.md pristracker/data/
+          if git diff --cached --quiet; then
+            echo "Ingen endringer."
+          else
+            git commit -m "Pristracker: oppdaterte priser $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi
+
+      - name: Lag varsel (GitHub-issue) ved prisfall eller målpris
+        if: hashFiles('pristracker/data/varsler.md') != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --title "Prisvarsel $(TZ=Europe/Oslo date +'%d.%m %H:%M')" \
+            --body-file pristracker/data/varsler.md
