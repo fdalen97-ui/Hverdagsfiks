@@ -1,11 +1,10 @@
 # Prisrapport
 
-Sist oppdatert: **2026-11-16 14:41**. Oppdateres automatisk av GitHub Actions.
+Sist oppdatert: **2026-11-17 00:45**. Oppdateres automatisk av GitHub Actions.
 
 ## Varsler denne runden
 
-- 📉 **Hodelykt Petzl Actik Core (rødt lys)** falt fra 777 kr til **702 kr** hos Alpinstore (60 EUR) – https://www.alpinstore.com/no/625055-petzl-lampe-actik-core-rd-.html
-- 🏆 **Hodelykt Petzl Actik Core (rødt lys)**: ny laveste pris 702 kr (før: 777 kr, 2026-11-09)
+- Ingen nye varsler.
 
 ## Beste pris per vare
 
