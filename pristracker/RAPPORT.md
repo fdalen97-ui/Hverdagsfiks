@@ -1,6 +1,6 @@
 # Prisrapport
 
-Sist oppdatert: **2026-11-18 15:01**. Oppdateres automatisk av GitHub Actions.
+Sist oppdatert: **2026-11-18 23:36**. Oppdateres automatisk av GitHub Actions.
 
 ## Varsler denne runden
 
