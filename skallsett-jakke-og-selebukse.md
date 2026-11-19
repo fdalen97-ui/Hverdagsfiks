@@ -8,9 +8,9 @@
 
 | Plagg | Førstevalg | Målpris | Reserve |
 |---|---|---|---|
-| **Jakke** | Brukt **Arc'teryx Rush GTX Pro, L** (FINN 480037206), hvis den fortsatt er ledig | ≤ 3 300 kr | **Rab Kinetic Alpine Stretch** (9/10 hos Fri Flyt, 4 999 kr). Kjøp på Black Week-tilbud, målpris ≤ 3 900 kr |
+| **Jakke** | **Patagonia Stormstride, L** (Fri Flyt 10/10), på restsalg | ≤ 3 500 kr | Brukt **Arc'teryx Rush GTX Pro** (3 300 kr, FINN 480037206) eller **Bergans Breathe 3L** (9/10, ≤ 3 500 kr) |
 | **Selebukse** | **Sweet Crusader Gore-Tex Pro, L** (Fri Flyt 9/10 i alle kategorier, høyt liv med seler) hvis du finner den på outlet | ≤ 4 000 kr | **Bergans Y MountainLine Breathe 3L Bib** (9/10) til ≤ 4 000 kr. Rab Khroma Latok GTX Pro Bib (9/10) til ≤ 5 000 kr |
-| **Sum** | | **≈ 7 300 kr** | |
+| **Sum** | | **≈ 7 500 kr** | |
 
 Bukser du ikke trenger nå: Hybrid Softshell-buksa og en egen Rabot-skallbukse. Én god selebukse dekker både Høgruta og vanlige toppturer.
 
@@ -60,13 +60,24 @@ En velholdt brukt skallbukse er et godt kjøp: buksene slites mindre enn jakkene
 
 Fri Flyt skriver at softshell er blitt standard for toppturbukser og kan kombineres med en kraftigere skalljakke. Det stemmer for dagsturer i tørt vær. På Høgruta i påsken kan du ikke velge været, så en vanntett 3-lags selebukse er riktig valg når du bare skal ha én bukse.
 
-## Jakken: hvorfor ikke kjøpe Rab-settet?
+## Jakken: kandidater og rangering
 
-Rab-jakken er en svært god jakke for **pengene og for motbakke**: 10/10 opp, 10/10 bevegelighet, 541 g og 4 999 kr. Men Fri Flyt gir den **5/10 i slitestyrke og 6/10 i værbeskyttelse**, og skriver at den ikke er laget for «det aller jævligste været». Høgruta er nettopp der jakken får mest slitasje (sekkestropper hver dag) og mest vær. Slitestyrke betyr mer på jakken enn på buksa, fordi det er jakken som har sekken på seg.
+Jakken er plagget som slites mest, fordi sekkestroppene gnir på skuldrene hver dag. På Høgruta trenger den derfor slitesterkt 3-lags stoff, pit zips og en hette som går over hjelmen. Pudderskjørt trenger du ikke når du har selebukse. Karakterene er Fri Flyts: totalt / opp / ned / slitestyrke / passform / brukervennlighet / vær.
 
-- **Hvis Rush-jakken i Lier fortsatt er ledig:** kjøp den (3 300 kr, Gore-Tex Pro, pit zips, best testet til ski). Den kan brukes med hvilken som helst selebukse. Pudderskjørtet blir overflødig når du har bib.
-- **Hvis den er solgt, eller du vil ha ny jakke med garanti:** Rab Kinetic Alpine Stretch er et godt valg *hvis* du tar vare på den og har et pakkbart ekstralag for de verste dagene. Fri Flyt skriver selv at det er «vanskelig å se for seg en bedre skijakke» for den som går mest topptur i godt eller litt ruskete vær.
-- **Bergans-jakkene du prøvde (Stormstride/Breathe i L):** de er fortsatt gode alternativer. Patagonia har hatt Stormstride til −30 % (3 919 kr for damemodellen, [Patagonia](https://eu.patagonia.com/no/en/product/womens-stormstride-ski-snowboard-shell-jacket/29976.html)), så en herremodell rundt 3 900 kr er realistisk i Black Week.
+| Jakke | Membran | Fri Flyt | Vekt (L) | Ny pris | Tilbud / brukt nå | Vurdering |
+|---|---|---|---|---|---|---|
+| **Patagonia Stormstride** | H2No 3L, 40D | **10/10**, den eneste | 547 g | 5 199 kr (ved test) | **275 €** (−45 %) hos [Alpinstore](https://www.alpinstore.com/no/586216-patagonia-ms-stormstride-jkt-raptor-brown.html); £315 (−30 %) hos [Patagonia](https://eu.patagonia.com/gb/en/product/mens-stormstride-ski-snowboard-shell-jacket/29971.html) | Best testet. Switchbacks beste backcountryjakke. Pit zips og god hette. Ser ut til å være på vei ut av sortimentet ([Outdoorplay](https://outdoorplay.com/products/patagonia-mens-stormstride-jacket)), så restlageret selges ut. Kildene er uenige om størrelsen (stor ifølge Fri Flyt, trang ifølge Switchback), så prøv før du kjøper eller bruk åpent kjøp |
+| **Arc'teryx Rush GTX Pro** (brukt, eldre ePTFE) | Gore-Tex Pro | 8/10 | ca. 500–600 g | ca. 9 600 kr | **3 300 kr** på FINN (480037206) | Mest slitesterk per krone, med pit zips. Fri Flyt trekker for hette og krage. Ingen garanti |
+| **Bergans Y MountainLine Breathe 3L** | Bega Breathe Pro | 9/10 | 463 g | 5 699 kr | 395 € (−28 %) hos [Sportfits](https://sportfits.eu/products/bergans-y-mountainline-breathe-3l-shell-jacket-men); brukt 2 000–2 800 kr på [FINN](https://www.finn.no/444417046) | Lettest. Du har prøvd den, og L passer. Fri Flyt: svakere pusteevne og værbeskyttelse enn Gore-Tex. Samme serie som Breathe Bib |
+| **Rab Kinetic Alpine Stretch** | Pertex Shield stretch | 9/10 (opp 10, slitestyrke **5**, vær **6**) | 541 g | 4 999 kr | – | Best i motbakke og i godt vær, men svakest der Høgruta er tøffest |
+| Rab Khroma Latok GTX Pro | Gore-Tex Pro ePE | «Imponerende allsidig» (karakteren er ikke limt inn) | – | ca. 7 000+ kr | £349 (−41 %) i UK ([Countryside](https://www.countryside.co.uk/rab-mens-khroma-latok-gore-tex-pro-ski-jacket)) | Topp, men dyr. Bare aktuell hvis den kommer under 4 500 kr |
+| Sweet Crusader Gore-Tex Pro | Gore-Tex Pro | Ikke testet her | – | 799 € | 479 € (−40 %) i [Sweets EU-outlet](https://www.sweetprotection.com/eu/en/crusader-gore-tex-pro-jacket-mens-black/) | Matcher selebuksa, men koster ca. 5 600 kr selv på outlet. Ikke verdt det for et «sett» |
+
+**Rangering:**
+1. **Patagonia Stormstride** til ≤ 3 500 kr. Det er den best testede jakken, og nå er den på restsalg. Ved kjøp fra EU kommer norsk mva og eventuelt fortollingsgebyr i tillegg. Regn ut totalprisen i kassen før du betaler.
+2. **Brukt Arc'teryx Rush GTX Pro** til 3 300 kr. Velg den hvis Stormstride ikke finnes i L, eller hvis du vil ha Gore-Tex Pro for slitestyrken.
+3. **Bergans Breathe 3L** til ≤ 3 500 kr ny, eller ≤ 2 500 kr brukt. Tryggest på størrelse, siden du har prøvd den.
+4. **Rab Kinetic Alpine Stretch** til ≤ 3 900 kr. Velg den bare hvis du mest skal gå dagsturer i godt vær.
 
 **Jakt:** ingen av disse skal brukes på jakt (farge og lyd). Hogna-planen fra før står seg: fleece og vest nå, skall i vårsalget.
 
