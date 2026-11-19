@@ -253,7 +253,7 @@ button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
   /* ---------- poses seen from above, centimetres, the front wall is up (negative y).
      bh holds the parts of the one-handed backhand that are not a plain mirror image,
      already in backhand coordinates. ---------- */
-  var FEET_LUNGE = { fL: [38, -36], fR: [-44, 22], aL: 75, aR: 50 };
+  var FEET_LUNGE = { fL: [56, -40], fR: [-36, 20], aL: 75, aR: 50 };
   var P = {
     walk:    { sh: 0,   hip: 0,  H: [26, -8],   T: [34, -70],  lFree: [-28, -10], fL: [-15, 10], fR: [15, -4],  aL: 0,   aR: 0,  w: 0.5 },
     ready:   { sh: 0,   hip: 0,  H: [14, -24],  T: [2, -86],   lFree: [-28, -16], fL: [-22, 8],  fR: [22, 8],   aL: -10, aR: 10, w: 0.5 },
@@ -265,9 +265,9 @@ button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
                bh: { H: [-30, 6], T: [-22, 66], lFree: [20, 48] } },
     contact: { sh: 72,  hip: 70, H: [52, -12],  T: [116, -18], lFree: [-24, -36], w: 0.15,
                bh: { lFree: [14, 52] } },
-    through: { sh: 55,  hip: 62, H: [44, -34],  T: [62, -92],  lFree: [-30, -28], w: 0.15,
+    through: { sh: 40,  hip: 56, H: [30, -48],  T: [40, -108], lFree: [-30, -28], w: 0.15,
                bh: { lFree: [8, 54] } },
-    finish:  { sh: 40,  hip: 45, H: [36, -36],  T: [30, -74],  lFree: [-32, -18], fL: [26, -24], fR: [-34, 18], aL: 60, aR: 45, w: 0.4,
+    finish:  { sh: 40,  hip: 45, H: [30, -44],  T: [24, -82],  lFree: [-32, -18], fL: [44, -28], fR: [-30, 18], aL: 60, aR: 45, w: 0.4,
                bh: { lFree: [-4, 50] } }
   };
   ["lunge", "swing", "contact", "through"].forEach(function (k) {
@@ -498,7 +498,7 @@ button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
          '<polygon points="' + (ball[0] - 5) + ',-76 ' + (ball[0] + 5) + ',-76 ' + ball[0] + ',-88" fill="var(--label)"/>';
     s += '<g font-family="Barlow, Helvetica, Arial, sans-serif" font-size="9" font-weight="600" fill="var(--label)">' +
          '<text x="' + (ball[0] - sgn * 9) + '" y="-74" text-anchor="' + anchorIn + '">mot frontveggen</text>' +
-         '<text x="' + (sgn * 36) + '" y="-56" text-anchor="middle">fremste fot</text>' +
+         '<text x="' + (sgn * 54) + '" y="-56" text-anchor="middle">fremste fot</text>' +
          '<text x="' + (sgn * 152) + '" y="-5" text-anchor="middle" fill="var(--wall-ink)" transform="rotate(' + (sgn * 90) + " " + (sgn * 152) + ' -5)">sideveggen</text>' +
          '</g>';
     svg.innerHTML = s;
