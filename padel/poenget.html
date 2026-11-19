@@ -1,0 +1,606 @@
+<meta charset="utf-8">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Padelpoenget steg for steg</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+/* Layout: step rail on top, then a three-part stage (court from above, player from above, cue card).
+   The drawings always use padel-court colours (blue turf, glass edge); the page around them follows the theme. */
+:root {
+  --bg: #f1f4f6;
+  --surface: #ffffff;
+  --ink: #14222b;
+  --muted: #56646d;
+  --line: #d3dade;
+  --accent: #1b5a9c;
+  --accent-ink: #ffffff;
+  --court: #2867ad;
+  --apron: #22323d;
+  --court-line: #ffffff;
+  --glass: #bfe6f2;
+  --mesh: #8ea6b5;
+  --fig: #fbfcf8;
+  --mate: #b7c6d6;
+  --fig-edge: #0c1820;
+  --racket: #101d26;
+  --ball: #dcea3c;
+  --mark: #f0604a;
+  --display: "Sofia Sans Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --body: "Barlow", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1418; --surface: #151f25; --ink: #e7edf0; --muted: #9aa8b1; --line: #28353d;
+    --accent: #8cc3f0; --accent-ink: #0b1a25; --court: #225892; --apron: #18242c;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1418; --surface: #151f25; --ink: #e7edf0; --muted: #9aa8b1; --line: #28353d;
+  --accent: #8cc3f0; --accent-ink: #0b1a25; --court: #225892; --apron: #18242c;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--body); font-size: 16px; line-height: 1.5;
+}
+.wrap {
+  max-width: 1080px; margin: 0 auto;
+  padding-block: 28px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 28px;
+}
+h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.05; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); letter-spacing: -0.01em; text-transform: uppercase; }
+h2 { font-size: 1.7rem; text-transform: uppercase; letter-spacing: 0.01em; }
+h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); }
+p { margin: 0; }
+.eyebrow { font-family: var(--display); font-weight: 600; font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+
+header { display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: flex-end; justify-content: space-between; }
+header .intro { display: flex; flex-direction: column; gap: 8px; min-width: 0; flex: 1 1 420px; }
+header .lede { color: var(--muted); max-width: 58ch; }
+
+.seg { display: inline-flex; border: 1.5px solid var(--ink); border-radius: 4px; overflow: hidden; }
+.seg button {
+  font: 600 1.05rem var(--display); letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 8px 18px; border: 0; background: transparent; color: var(--ink); cursor: pointer;
+}
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+
+button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* step rail */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 6px; }
+.steps button {
+  width: 100%; height: 100%; display: flex; flex-direction: column; gap: 2px; align-items: flex-start;
+  padding: 8px 10px; background: transparent; color: var(--muted); cursor: pointer; text-align: left;
+  border: 0; border-top: 3px solid var(--line); font-family: var(--body);
+}
+.steps .n { font: 700 1.5rem/1 var(--display); font-variant-numeric: tabular-nums; }
+.steps .t { font-size: 0.82rem; font-weight: 500; line-height: 1.2; }
+.steps button.done { border-top-color: var(--muted); }
+.steps button[aria-current="step"] { border-top-color: var(--accent); color: var(--ink); }
+.steps button[aria-current="step"] .n { color: var(--accent); }
+
+/* stage */
+.stage { display: grid; grid-template-columns: 210px minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.view { display: flex; flex-direction: column; gap: 6px; min-width: 0; margin: 0; }
+.view figcaption { font-size: 0.82rem; color: var(--muted); }
+.view figcaption b { color: var(--ink); font-weight: 600; }
+.view svg { display: block; width: 100%; height: auto; border-radius: 4px; }
+
+.card { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.card .num { font: 700 1rem var(--display); letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.card h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); }
+.card .cue { font-size: 1.15rem; font-weight: 600; line-height: 1.35; }
+.card ul, .cmp ul { margin: 0; padding-left: 1.1em; display: flex; flex-direction: column; gap: 6px; }
+.card .check { border-top: 1px solid var(--line); padding-top: 12px; color: var(--muted); }
+.card .check b { color: var(--ink); font-weight: 600; }
+.ctrl { display: flex; flex-wrap: wrap; gap: 8px; }
+.ctrl button {
+  font: 600 1.05rem var(--display); letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 10px 18px; border-radius: 4px; cursor: pointer;
+  border: 1.5px solid var(--ink); background: transparent; color: var(--ink);
+}
+.ctrl button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.ctrl button:disabled { opacity: 0.35; cursor: default; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 0.85rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 7px; }
+.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 1.5px solid var(--fig-edge); }
+.legend .lb { background: var(--ball); }
+.legend .lm { background: var(--mark); }
+.legend .lf { background: var(--mark); width: 9px; height: 15px; border-radius: 50%; }
+.legend .ly, .legend .lp, .legend .lo { box-shadow: 0 0 0 3px var(--court); margin: 0 3px; }
+.legend .ly { background: var(--fig); }
+.legend .lp { background: var(--mate); }
+.legend .lo { background: var(--court); border: 2px solid var(--fig); }
+.legend .lg { background: var(--glass); width: 18px; height: 6px; border-radius: 0; }
+
+/* lower sections */
+.checks { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+.checks section { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.checks p { color: var(--muted); max-width: 60ch; }
+.cmp { display: flex; flex-direction: column; gap: 16px; }
+.cmp > div { display: flex; flex-direction: column; gap: 8px; min-width: 0; border-top: 1px solid var(--line); padding-top: 12px; }
+.cmp li b { font-weight: 600; }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+
+.short { border-top: 1px solid var(--line); padding-top: 20px; display: flex; flex-direction: column; gap: 6px; }
+.short p { font: 600 clamp(1.2rem, 3.4vw, 1.6rem)/1.25 var(--display); letter-spacing: 0.02em; text-transform: uppercase; }
+.short p span { color: var(--muted); padding: 0 0.15em; }
+
+@media (max-width: 860px) {
+  .stage { grid-template-columns: minmax(0, 0.52fr) minmax(0, 1fr); gap: 12px; }
+  .stage .card { grid-column: 1 / -1; }
+  .checks { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 620px) {
+  .steps { gap: 4px; }
+  .steps button { align-items: center; padding: 8px 0; }
+  .steps .t { display: none; }
+}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="intro">
+      <p class="eyebrow">Padel · double · høyrehendt</p>
+      <h1>Poenget steg for steg</h1>
+      <p class="lede">Paret som holder nettet, styrer poenget. Her er veien dit: fra forsvar bak, via glasset og lobben, til volley fremme. Gå gjennom de åtte stegene ett for ett, eller spill av hele poenget.</p>
+    </div>
+    <div class="seg" role="group" aria-label="Velg side ballen kommer på">
+      <button type="button" id="mode-fh" aria-pressed="true">Forehand</button>
+      <button type="button" id="mode-bh" aria-pressed="false">Backhand</button>
+    </div>
+  </header>
+
+  <ol class="steps" id="steps"></ol>
+
+  <div class="stage">
+    <figure class="view">
+      <svg id="court" viewBox="-58 -108 116 216" role="img" aria-label="Padelbanen sett ovenfra: du og makkeren nederst, motstanderne øverst, og ballens bane"></svg>
+      <figcaption>Banen ovenfra. Du og makkeren står nederst.</figcaption>
+    </figure>
+    <figure class="view">
+      <svg id="player" viewBox="-125 -148 250 250" role="img" aria-label="Deg sett rett ovenfra: hode, skuldre, hofter, føtter og racket"></svg>
+      <figcaption id="pv-cap">Deg sett rett ovenfra.</figcaption>
+    </figure>
+    <div class="card" aria-live="polite">
+      <p class="num" id="c-num"></p>
+      <h2 id="c-title"></h2>
+      <p class="cue" id="c-cue"></p>
+      <ul id="c-list"></ul>
+      <p class="check" id="c-check"></p>
+      <div class="ctrl">
+        <button type="button" id="prev">Forrige</button>
+        <button type="button" id="play" class="primary">Spill av poenget</button>
+        <button type="button" id="next">Neste</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <span><i class="ly"></i>Du</span>
+    <span><i class="lp"></i>Makkeren</span>
+    <span><i class="lo"></i>Motstanderne</span>
+    <span><i class="lb"></i>Ballen, større når den er høyt</span>
+    <span><i class="lg"></i>Glass</span>
+    <span><i class="lf"></i>Rød fot: der tyngdepunktet er</span>
+    <span><i class="lm"></i>Rød prikk: enden av skaftet</span>
+  </div>
+
+  <div class="checks">
+    <section>
+      <h2>Likt og annerledes enn tennis</h2>
+      <div class="cmp">
+        <div>
+          <h3>Likt</h3>
+          <ul>
+            <li>Skuldrene og hofta driver slaget.</li>
+            <li>Du snur tidlig.</li>
+            <li>Du står i balanse etter slaget.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Annerledes</h3>
+          <ul>
+            <li><b>Kortere sving.</b> Mindre bakoversving og mindre håndledd. Kontroll betyr mer enn kraft.</li>
+            <li><b>Kontinentalt grep</b> på nesten alle slag, også forehand.</li>
+            <li><b>Lavere fullføring</b> på de fleste slag. Racketen ender mot målet, ikke over skulderen, bortsett fra smash og vibora.</li>
+            <li><b>La ballen komme ut fra glasset.</b> Snu skuldrene tidlig og vent, ikke stress ballen.</li>
+            <li><b>Lobb og bandeja</b> er viktigere enn hardt fra baklinja. Ta nettet og hold det.</li>
+            <li><b>Bein:</b> små tilpasningssteg og lavt tyngdepunkt, særlig ved nettet.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Nettet er målet</h2>
+      <p>Samme bane, to situasjoner. Fra nettet kan dere slå ned i banen. Bakfra må dere slå opp, og da er lobben veien frem.</p>
+      <div class="pair">
+        <figure class="view">
+          <svg id="mini-net" viewBox="-58 -108 116 216" role="img" aria-label="Dere står ved nettet, motstanderne står bak, og volleyen går ned i banen deres"></svg>
+          <figcaption><b>Dere holder nettet.</b> Motstanderne må slå opp.</figcaption>
+        </figure>
+        <figure class="view">
+          <svg id="mini-back" viewBox="-58 -108 116 216" role="img" aria-label="Dere står bak ved glasset, motstanderne står ved nettet og slår ned mot dere"></svg>
+          <figcaption><b>Dere står fast bak.</b> Lobb for å komme frem.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </div>
+
+  <div class="short">
+    <p class="eyebrow">Kortversjonen på banen</p>
+    <p>Klar bak <span>→</span> snu <span>→</span> vent på glasset <span>→</span> lobb <span>→</span> frem sammen <span>→</span> klar fremme <span>→</span> volley <span>→</span> hold nettet</p>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- court geometry, metres, origin at the centre of the net; a padel court is 10 x 20 ---------- */
+  var HALF_W = 5, HALF_L = 10, SERVICE = 6.95, SIDE_GLASS = 4;
+  var LOB_OFF = { x: 0.57, y: -0.49 };       // ball relative to you when you hit the lob
+  var VOL_OFF = { x: 0.59, y: -0.59 };       // ball relative to you when you hit the volley
+  var FH = {
+    START: { x: 2.4, y: 6.2 }, MSTART: { x: -2.4, y: 6.2 },
+    BACK: { x: 2.5, y: 8.2 }, MBACK: { x: -2.5, y: 8.2 }, MID: { x: 2.7, y: 8.8 },
+    NET: { x: 2.3, y: 2.0 }, MNET: { x: -2.3, y: 2.0 },
+    O1: { x: -2.3, y: -2.6 }, O2: { x: 2.3, y: -2.6 }, O1B: { x: -2.3, y: -7.6 }, O2B: { x: 1.75, y: -9.4 },
+    // the ball: opponent hits, bounce, back glass, your lob, lob bounce, opponent hits, your volley, end
+    A: { x: 2.6, y: -2.2 }, B: { x: 3.3, y: 7.6 }, W: { x: 3.55, y: 10 }, C1: { x: 3.4, y: 8.8 },
+    L: { x: 2.0, y: -8.0 }, R: { x: 2.2, y: -9.1 }, E: { x: -1.4, y: -7.6 }
+  };
+  FH.HIT = { x: FH.C1.x - LOB_OFF.x, y: FH.C1.y - LOB_OFF.y };
+  FH.C2 = { x: FH.NET.x + VOL_OFF.x, y: FH.NET.y + VOL_OFF.y };
+  var LIFT = [0.35, 0.25, 0.15, 1, 0.3, 0.25, 0.15];   // how high the ball gets on each leg; the lob is the tall one
+  var CAM_NET = -72;                                    // the close-up looks further ahead when you are at the net
+
+  /* ---------- poses seen from above, centimetres, the net is up (negative y). The padel racket is about 45 cm ---------- */
+  var P = {
+    move:       { sh: 0,   hip: 0,   H: [12, -22], T: [8, -66],   lFree: [-20, -22], lOn: 1, lFrac: 0.5, fL: [-15, -6],  fR: [15, 12], w: 0.5 },
+    readyBack:  { sh: 0,   hip: 0,   H: [4, -24],  T: [-2, -68],  lFree: [-20, -20], lOn: 1, lFrac: 0.5, fL: [-21, 8],   fR: [21, 8],  w: 0.5 },
+    turn:       { sh: 60,  hip: 35,  H: [32, 4],   T: [46, 46],   lFree: [26, -34],  lOn: 0, lFrac: 0.5, fL: [-13, -6],  fR: [19, 14], w: 0.65 },
+    wait:       { sh: 82,  hip: 60,  H: [30, 14],  T: [38, 58],   lFree: [34, -28],  lOn: 0, lFrac: 0.5, fL: [-8, -12],  fR: [18, 18], w: 0.8 },
+    lobHit:     { sh: 15,  hip: 0,   H: [26, -34], T: [70, -40],  lFree: [-34, -22], lOn: 0, lFrac: 0.5, fL: [-10, -14], fR: [18, 14], w: 0.35 },
+    lobFinish:  { sh: -25, hip: -15, H: [14, -58], T: [10, -102], lFree: [-36, -4],  lOn: 0, lFrac: 0.5, fL: [-10, -14], fR: [16, 10], w: 0.2 },
+    readyNet:   { sh: 0,   hip: 0,   H: [4, -32],  T: [-2, -76],  lFree: [-20, -24], lOn: 1, lFrac: 0.5, fL: [-22, 6],   fR: [22, 6],  w: 0.5 },
+    volleyPrep: { sh: 30,  hip: 10,  H: [34, -16], T: [52, -57],  lFree: [2, -38],   lOn: 0, lFrac: 0.5, fL: [-18, 4],   fR: [22, 8],  w: 0.65 },
+    volleyHit:  { sh: 8,   hip: 0,   H: [30, -40], T: [72, -52],  lFree: [-30, -22], lOn: 0, lFrac: 0.5, fL: [-8, -24],  fR: [20, 10], w: 0.3 },
+    volleyFin:  { sh: -8,  hip: -5,  H: [26, -52], T: [62, -78],  lFree: [-32, -16], lOn: 0, lFrac: 0.5, fL: [-8, -24],  fR: [20, 10], w: 0.25 }
+  };
+  // One-handed backhand: mirrored positions, but the hitting shoulder stays in front and the left hand supports the racket in the turn.
+  var BH = {
+    turn:       { lOn: 1 },
+    wait:       { lOn: 1 },
+    lobHit:     { sh: -35, hip: -20, lFree: [-34, 24] },
+    lobFinish:  { sh: -10, hip: -5, H: [2, -60], T: [6, -104], lFree: [-36, 22] },
+    volleyPrep: { lOn: 1 },
+    volleyHit:  { sh: -25, hip: -10, lFree: [-38, 18] },
+    volleyFin:  { sh: -12, hip: -5, H: [-20, -50], T: [-54, -78], lFree: [-38, 20] }
+  };
+  function mirrorPose(p, o) {
+    var q = { sh: -p.sh, hip: -p.hip, H: [-p.H[0], p.H[1]], T: [-p.T[0], p.T[1]], lFree: [-p.lFree[0], p.lFree[1]],
+      lOn: p.lOn, lFrac: p.lFrac, fL: [-p.fR[0], p.fR[1]], fR: [-p.fL[0], p.fL[1]], w: 1 - p.w };
+    if (o) Object.keys(o).forEach(function (k) { q[k] = o[k]; });
+    return q;
+  }
+  function mirrorPt(v) { return { x: -v.x, y: v.y }; }
+
+  var mode = "fh", G, POSE, PATH;
+  var SAME = { move: 1, readyBack: 1, readyNet: 1 };
+  function setGeometry() {
+    G = {}; POSE = {};
+    Object.keys(FH).forEach(function (k) { G[k] = mode === "bh" ? mirrorPt(FH[k]) : FH[k]; });
+    Object.keys(P).forEach(function (k) { POSE[k] = (mode === "bh" && !SAME[k]) ? mirrorPose(P[k], BH[k]) : P[k]; });
+    PATH = [G.A, G.B, G.W, G.C1, G.L, G.R, G.C2, G.E];
+  }
+
+  /* ---------- the eight steps ---------- */
+  function back(o) { var f = { me: G.BACK, mate: G.MBACK, o1: G.O1, o2: G.O2, cam: 0 }; Object.keys(o).forEach(function (k) { f[k] = o[k]; }); return f; }
+  function net(o) { var f = { me: G.NET, mate: G.MNET, o1: G.O1B, o2: G.O2B, cam: CAM_NET }; Object.keys(o).forEach(function (k) { f[k] = o[k]; }); return f; }
+  var STEPS = [
+    { t: "Klar bak", title: "Klarstilling bak",
+      cue: "Stå bak servelinja, med racketen foran kroppen.",
+      list: ["Kontinentalt grep, det samme på nesten alle slag.", "Lavt tyngdepunkt og små steg, klar til å gå begge veier.", "Du og makkeren står på linje."],
+      check: "Du er i klarstilling før motstanderen slår.",
+      frames: function () { return [back({ me: G.START, mate: G.MSTART, bp: 0, pose: "move", jump: true }), back({ bp: 0, pose: "readyBack", dur: 900 })]; } },
+    { t: "Snu", title: "Snu tidlig, kort sving",
+      cue: { fh: "Snu skuldrene straks du ser at ballen kommer på forehand.", bh: "Snu skuldrene straks du ser at ballen kommer på backhand." },
+      list: { fh: ["Kort bakoversving. Racketen trenger ikke langt bak.", "Mindre håndledd enn i tennis. Kontroll betyr mer enn kraft."],
+              bh: ["Kort bakoversving. Racketen trenger ikke langt bak.", "Venstre hånd støtter racketen mens du snur.", "Mindre håndledd enn i tennis. Kontroll betyr mer enn kraft."] },
+      check: "Racketen er klar før ballen spretter.",
+      frames: function () { return [back({ bp: 0.38, pose: "turn", dur: 650 })]; } },
+    { t: "Glasset", title: "La ballen komme ut fra glasset",
+      cue: "Følg ballen bakover og vent. Ikke stress ballen.",
+      list: ["La ballen sprette i banen og gå i bakglasset.", "Flytt deg med ballen, så den kommer ut igjen foran deg.", "Hold skuldrene snudd mens du venter."],
+      check: "Du treffer ballen foran kroppen, etter at den har kommet ut fra glasset.",
+      frames: function () { return [back({ me: G.MID, bp: 1, pose: "wait", dur: 800 }), back({ me: G.HIT, bp: 2, pose: "wait", dur: 550 }), back({ me: G.HIT, bp: 2.6, pose: "wait", dur: 500 })]; } },
+    { t: "Lobb", title: "Lobb",
+      cue: "Åpen racketflate og et rolig løft: høyt og dypt.",
+      list: ["Sving nedenfra og opp, og bruk beina.", "Sikt over motstanderne og mot bakglasset deres.", "Fullfør opp og frem mot målet, ikke rundt kroppen."],
+      check: "Motstanderne må snu og gå bakover.",
+      frames: function () { return [back({ me: G.HIT, bp: 3, pose: "lobHit", dur: 450 }), back({ me: G.HIT, bp: 3.22, pose: "lobFinish", dur: 450 })]; } },
+    { t: "Frem", title: "Ta nettet sammen",
+      cue: "Gå frem mens lobben er i lufta.",
+      list: ["Du og makkeren går samtidig og holder linja.", "Stopp og stå stille før motstanderen slår.", "Ikke helt inntil nettet, da blir du lett lobbet selv."],
+      check: "Dere står ved nettet før motstanderen treffer ballen.",
+      frames: function () { return [net({ bp: 4, pose: "move", dur: 1500 })]; } },
+    { t: "Klar fremme", title: "Klarstilling ved nettet",
+      cue: "Racketen høyt foran kroppen, klar for volley.",
+      list: ["Albuene litt frem fra kroppen.", "Lavt tyngdepunkt, vekten frem på forfoten.", "Se på ballen og motstanderens racket."],
+      check: "Du rekker volley på begge sider uten å svinge.",
+      frames: function () { return [net({ bp: 5, pose: "readyNet", dur: 650 })]; } },
+    { t: "Volley", title: "Volley",
+      cue: "Kort slag foran kroppen. Kontroll foran kraft.",
+      list: { fh: ["Nesten ingen bakoversving: snu litt og møt ballen.", "Ta et steg frem inn i slaget.", "Lav fullføring: racketen ender mot målet, ikke over skulderen."],
+              bh: ["Nesten ingen bakoversving: snu litt og møt ballen.", "Venstre hånd støtter racketen til du slår. Ta et steg frem inn i slaget.", "Lav fullføring: racketen ender mot målet, ikke over skulderen."] },
+      check: "Ballen går lavt og dypt, og du er klar igjen med en gang.",
+      frames: function () { return [net({ bp: 5.75, pose: "volleyPrep", dur: 650 }), net({ bp: 6, pose: "volleyHit", dur: 300 }), net({ bp: 6.2, pose: "volleyFin", dur: 350 })]; } },
+    { t: "Hold", title: "Hold nettet",
+      cue: "Tilbake i klarstilling, sammen med makkeren.",
+      list: ["Lobber de, tar du en bandeja: et kontrollert slag over hodet som holder dere fremme.", "Flytt dere sidelengs sammen etter hvor ballen er.", "Må dere bak, går dere bak sammen og starter på nytt."],
+      check: "Dere står fortsatt ved nettet etter slaget.",
+      frames: function () { return [net({ bp: 6.92, pose: "readyNet", dur: 900 })]; } }
+  ];
+  function pick(v) { return (v && v.fh) ? v[mode] : v; }
+
+  /* ---------- helpers ---------- */
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  function lerp2(a, b, t) { return [lerp(a[0], b[0], t), lerp(a[1], b[1], t)]; }
+  function lerpXY(a, b, t) { return { x: lerp(a.x, b.x, t), y: lerp(a.y, b.y, t) }; }
+  function lerpPose(a, b, t) {
+    return { sh: lerp(a.sh, b.sh, t), hip: lerp(a.hip, b.hip, t), H: lerp2(a.H, b.H, t), T: lerp2(a.T, b.T, t),
+      lFree: lerp2(a.lFree, b.lFree, t), lOn: lerp(a.lOn, b.lOn, t), lFrac: lerp(a.lFrac, b.lFrac, t),
+      fL: lerp2(a.fL, b.fL, t), fR: lerp2(a.fR, b.fR, t), w: lerp(a.w, b.w, t) };
+  }
+  function toState(f) { return { me: f.me, mate: f.mate, o1: f.o1, o2: f.o2, cam: f.cam, bp: f.bp, pose: POSE[f.pose] }; }
+  function lerpState(a, b, t) {
+    return { me: lerpXY(a.me, b.me, t), mate: lerpXY(a.mate, b.mate, t), o1: lerpXY(a.o1, b.o1, t), o2: lerpXY(a.o2, b.o2, t),
+      cam: lerp(a.cam, b.cam, t), bp: lerp(a.bp, b.bp, t), pose: lerpPose(a.pose, b.pose, t) };
+  }
+  function seg(bp) { return Math.min(PATH.length - 2, Math.max(0, Math.floor(bp))); }
+  function ballAt(bp) {
+    var i = seg(bp), t = Math.min(1, Math.max(0, bp - i));
+    return { x: lerp(PATH[i].x, PATH[i + 1].x, t), y: lerp(PATH[i].y, PATH[i + 1].y, t), h: LIFT[i] * Math.sin(Math.PI * t) };
+  }
+  function f1(n) { return Math.round(n * 10) / 10; }
+  function pt(a) { return f1(a[0]) + "," + f1(a[1]); }
+  function limb(points, w) {
+    var d = points.map(pt).join(" ");
+    return '<polyline points="' + d + '" fill="none" stroke="var(--fig-edge)" stroke-width="' + (w + 3.5) + '" stroke-linecap="round" stroke-linejoin="round"/>' +
+           '<polyline points="' + d + '" fill="none" stroke="var(--fig)" stroke-width="' + w + '" stroke-linecap="round" stroke-linejoin="round"/>';
+  }
+  function line(deg, half) {
+    var r = deg * Math.PI / 180, c = Math.cos(r) * half, s = Math.sin(r) * half;
+    return [[-c, -s], [c, s]];
+  }
+  function arm(s, h) {                 // shoulder, hand -> shoulder, elbow, hand
+    var dx = h[0] - s[0], dy = h[1] - s[1], d = Math.hypot(dx, dy), L = 32;
+    if (d < 0.01 || d >= 2 * L) return [s, h];
+    var hh = Math.sqrt(L * L - d * d / 4) * 0.6, m = [(s[0] + h[0]) / 2, (s[1] + h[1]) / 2];
+    var n = [-dy / d * hh, dx / d * hh];
+    var e1 = [m[0] + n[0], m[1] + n[1]], e2 = [m[0] - n[0], m[1] - n[1]];
+    return [s, Math.hypot(e1[0], e1[1]) > Math.hypot(e2[0], e2[1]) ? e1 : e2, h];
+  }
+  var LABEL = 'font-family="Sofia Sans Condensed, Arial Narrow, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.6" text-anchor="middle" fill="var(--court-line)"';
+
+  /* ---------- the figure seen from above ---------- */
+  function figure(p, ball, look) {
+    var S = line(p.sh, 22), Hp = line(p.hip, 13);
+    var H = p.H, T = p.T;
+    var on = lerp2(H, T, p.lFrac);
+    var lHand = lerp2(p.lFree, on, p.lOn);
+    var butt = lerp2(H, T, -0.14), throat = lerp2(H, T, 0.4);
+    var out = "";
+    function foot(f, share) {
+      var e = 'cx="' + f1(f[0]) + '" cy="' + f1(f[1] + 4) + '" rx="7.5" ry="13" transform="rotate(' + f1(p.hip * 0.7) + " " + f1(f[0]) + " " + f1(f[1] + 4) + ')"';
+      return "<ellipse " + e + ' fill="var(--fig)" stroke="var(--fig-edge)" stroke-width="2"/>' +
+             "<ellipse " + e + ' fill="var(--mark)" fill-opacity="' + f1(Math.pow(share, 1.6)) + '"/>';
+    }
+    out += foot(p.fL, 1 - p.w) + foot(p.fR, p.w);
+    out += '<polyline points="' + pt([Hp[0][0], Hp[0][1] + 5]) + " " + pt([Hp[1][0], Hp[1][1] + 5]) + '" stroke="var(--fig-edge)" stroke-opacity="0.55" stroke-width="19" stroke-linecap="round" fill="none"/>';
+    out += limb(S, 14);
+    out += limb(arm(S[0], lHand), 6.5);
+    out += limb(arm(S[1], H), 6.5);
+    // padel racket: short handle, then the thick solid head seen edge-on
+    out += '<polyline points="' + pt(butt) + " " + pt(throat) + '" stroke="var(--racket)" stroke-width="5" stroke-linecap="round" fill="none"/>';
+    out += '<polyline points="' + pt(throat) + " " + pt(T) + '" stroke="var(--court-line)" stroke-width="13" stroke-linecap="round" fill="none"/>';
+    out += '<polyline points="' + pt(throat) + " " + pt(T) + '" stroke="var(--racket)" stroke-width="10" stroke-linecap="round" fill="none"/>';
+    out += '<circle cx="' + f1(lHand[0]) + '" cy="' + f1(lHand[1]) + '" r="4.5" fill="var(--fig)" stroke="var(--fig-edge)" stroke-width="1.5"/>';
+    out += '<circle cx="' + f1(H[0]) + '" cy="' + f1(H[1]) + '" r="4.5" fill="var(--fig)" stroke="var(--fig-edge)" stroke-width="1.5"/>';
+    out += '<circle cx="' + f1(butt[0]) + '" cy="' + f1(butt[1]) + '" r="4" fill="var(--mark)" stroke="var(--fig-edge)" stroke-width="1.5"/>';
+    // head, looking at the ball
+    var gx = 0, gy = -1, g = look || ball;
+    if (g) { var gd = Math.hypot(g[0], g[1]); if (gd > 1) { gx = g[0] / gd; gy = g[1] / gd; } }
+    out += '<circle cx="0" cy="0" r="12" fill="var(--fig)" stroke="var(--fig-edge)" stroke-width="2"/>';
+    out += '<circle cx="' + f1(gx * 7.5) + '" cy="' + f1(gy * 7.5) + '" r="2.6" fill="var(--fig-edge)"/>';
+    if (ball) out += '<circle cx="' + f1(ball[0]) + '" cy="' + f1(ball[1]) + '" r="6.5" fill="var(--ball)" stroke="var(--fig-edge)" stroke-width="1.5"/>';
+    return out;
+  }
+
+  /* ---------- the court from above ---------- */
+  var k = 10; // 1 m = 10 units
+  var W = HALF_W * k, Lc = HALF_L * k, SV = SERVICE * k, SG = (HALF_L - SIDE_GLASS) * k;
+  var courtStatic =
+    '<rect x="-58" y="-108" width="116" height="216" fill="var(--apron)"/>' +
+    '<rect x="' + -W + '" y="' + -Lc + '" width="' + 2 * W + '" height="' + 2 * Lc + '" fill="var(--court)"/>' +
+    '<g stroke="var(--court-line)" stroke-width="1" fill="none">' +
+    '<line x1="' + -W + '" y1="' + -SV + '" x2="' + W + '" y2="' + -SV + '"/>' +
+    '<line x1="' + -W + '" y1="' + SV + '" x2="' + W + '" y2="' + SV + '"/>' +
+    '<line x1="0" y1="' + -(SV + 2) + '" x2="0" y2="' + (SV + 2) + '"/>' +
+    "</g>" +
+    // mesh along the middle of the sides, glass at the back and the back part of the sides
+    '<g stroke="var(--mesh)" stroke-width="1.4" stroke-dasharray="1.6 1.6" fill="none">' +
+    '<line x1="' + -W + '" y1="' + -SG + '" x2="' + -W + '" y2="' + SG + '"/>' +
+    '<line x1="' + W + '" y1="' + -SG + '" x2="' + W + '" y2="' + SG + '"/>' +
+    "</g>" +
+    '<g stroke="var(--glass)" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter" fill="none">' +
+    '<polyline points="' + -W + "," + -SG + " " + -W + "," + -Lc + " " + W + "," + -Lc + " " + W + "," + -SG + '"/>' +
+    '<polyline points="' + -W + "," + SG + " " + -W + "," + Lc + " " + W + "," + Lc + " " + W + "," + SG + '"/>' +
+    "</g>" +
+    '<line x1="' + -W + '" y1="0" x2="' + W + '" y2="0" stroke="var(--fig-edge)" stroke-width="2.6"/>' +
+    '<line x1="' + -W + '" y1="0" x2="' + W + '" y2="0" stroke="var(--court-line)" stroke-width="1" stroke-dasharray="1.5 1.5"/>';
+
+  function dot(q, kind) {
+    var c = 'cx="' + f1(q.x * k) + '" cy="' + f1(q.y * k) + '"';
+    if (kind === "opp") return "<circle " + c + ' r="3.6" fill="var(--court)" stroke="var(--fig)" stroke-width="1.7"/>';
+    if (kind === "mate") return "<circle " + c + ' r="4" fill="var(--mate)" stroke="var(--fig-edge)" stroke-width="1.3"/>';
+    return "<circle " + c + ' r="4.4" fill="var(--fig)" stroke="var(--fig-edge)" stroke-width="1.4"/>';
+  }
+  function courtScene(s, trail, ball, rings) {
+    var c = courtStatic;
+    c += '<line x1="' + f1(s.me.x * k) + '" y1="' + f1(s.me.y * k) + '" x2="' + f1(s.mate.x * k) + '" y2="' + f1(s.mate.y * k) + '" stroke="var(--court-line)" stroke-width="0.9" stroke-dasharray="2 2" opacity="0.75"/>';
+    if (trail && trail.length > 1)
+      c += '<polyline points="' + trail.map(function (q) { return f1(q.x * k) + "," + f1(q.y * k); }).join(" ") + '" fill="none" stroke="var(--ball)" stroke-width="1.3" stroke-dasharray="3 2" stroke-linejoin="round"/>';
+    (rings || []).forEach(function (q) { c += '<circle cx="' + f1(q.x * k) + '" cy="' + f1(q.y * k) + '" r="2.6" fill="none" stroke="var(--ball)" stroke-width="1"/>'; });
+    c += dot(s.o1, "opp") + dot(s.o2, "opp") + dot(s.mate, "mate") + dot(s.me, "me");
+    if (ball) c += '<circle cx="' + f1(ball.x * k) + '" cy="' + f1(ball.y * k) + '" r="' + f1(2.3 + 1.9 * (ball.h || 0)) + '" fill="var(--ball)" stroke="var(--fig-edge)" stroke-width="0.8"/>';
+    return c;
+  }
+
+  /* ---------- drawing the two views ---------- */
+  var courtSvg = $("court"), playerSvg = $("player");
+  function draw(s) {
+    var b = ballAt(s.bp), i = seg(s.bp);
+    var trail = PATH.slice(0, i + 1); trail.push(b);
+    var rings = [];
+    if (s.bp >= 1) rings.push(G.B);
+    if (s.bp >= 4) rings.push(G.L);
+    courtSvg.innerHTML = courtScene(s, s.bp > 0.01 ? trail : null, b, rings);
+
+    // close-up, centimetres around you; the window slides forward when you are at the net
+    var top = -148 + s.cam, bottom = top + 250;
+    playerSvg.setAttribute("viewBox", "-125 " + f1(top) + " 250 250");
+    var glassY = (HALF_L - s.me.y) * 100, netY = -s.me.y * 100, svY = (SERVICE - s.me.y) * 100;
+    var x0 = (-HALF_W - s.me.x) * 100, x1 = (HALF_W - s.me.x) * 100;
+    var p = '<rect x="-125" y="' + f1(top) + '" width="250" height="250" fill="var(--court)"/>';
+    p += '<line x1="' + f1(x0) + '" y1="' + f1(svY) + '" x2="' + f1(x1) + '" y2="' + f1(svY) + '" stroke="var(--court-line)" stroke-width="5"/>';
+    var netSeen = netY > top + 8, glassSeen = glassY < bottom - 4;
+    if (glassSeen) {
+      p += '<rect x="-125" y="' + f1(glassY) + '" width="250" height="' + f1(Math.max(0, bottom - glassY)) + '" fill="var(--apron)"/>';
+      p += '<line x1="-125" y1="' + f1(glassY) + '" x2="125" y2="' + f1(glassY) + '" stroke="var(--glass)" stroke-width="8"/>';
+      if (glassY + 20 < bottom) p += "<text " + LABEL + ' x="0" y="' + f1(glassY + 19) + '">BAKGLASSET</text>';
+    }
+    if (netSeen) {
+      p += '<line x1="-125" y1="' + f1(netY) + '" x2="125" y2="' + f1(netY) + '" stroke="var(--fig-edge)" stroke-width="9"/>';
+      p += '<line x1="-125" y1="' + f1(netY) + '" x2="125" y2="' + f1(netY) + '" stroke="var(--court-line)" stroke-width="3" stroke-dasharray="5 5"/>';
+      p += "<text " + LABEL + ' x="0" y="' + f1(netY + 20) + '">NETTET</text>';
+    } else {
+      p += "<text " + LABEL + ' x="0" y="' + f1(top + 14) + '" opacity="0.85">NETTET ↑</text>';
+    }
+    var local = [(b.x - s.me.x) * 100, (b.y - s.me.y) * 100];
+    var visible = Math.abs(local[0]) < 138 && local[1] > top - 12 && local[1] < bottom + 10;
+    p += figure(s.pose, visible ? local : null, local);
+    playerSvg.innerHTML = p;
+  }
+
+  function drawMinis() {
+    $("mini-net").innerHTML = courtScene({ me: G.NET, mate: G.MNET, o1: G.O1B, o2: G.O2B }, [G.C2, G.E], { x: G.E.x, y: G.E.y, h: 0 }, []);
+    var deep = { x: G.BACK.x + (mode === "bh" ? -0.5 : 0.5), y: 8.6 };
+    $("mini-back").innerHTML = courtScene({ me: G.BACK, mate: G.MBACK, o1: G.O1, o2: G.O2 }, [G.A, deep], { x: deep.x, y: deep.y, h: 0 }, []);
+  }
+
+  /* ---------- step rail and card ---------- */
+  var cur = 0, state, token = 0, playing = false, holdTimer = null;
+  var rail = $("steps");
+  STEPS.forEach(function (s, i) {
+    var li = document.createElement("li"), b = document.createElement("button");
+    b.type = "button"; b.id = "step-" + (i + 1);
+    b.setAttribute("aria-label", "Steg " + (i + 1) + ": " + s.title);
+    b.innerHTML = '<span class="n">' + (i + 1) + '</span><span class="t">' + s.t + "</span>";
+    b.addEventListener("click", function () { stop(); go(i, true); });
+    li.appendChild(b); rail.appendChild(li);
+  });
+
+  function card() {
+    var s = STEPS[cur];
+    $("c-num").textContent = "Steg " + (cur + 1) + " av 8 · " + (mode === "bh" ? "backhand" : "forehand");
+    $("c-title").textContent = s.title;
+    $("c-cue").textContent = pick(s.cue);
+    $("c-list").innerHTML = pick(s.list).map(function (x) { return "<li>" + x + "</li>"; }).join("");
+    $("c-check").innerHTML = "<b>Kjennetegn:</b> " + s.check;
+    $("pv-cap").textContent = cur >= 4 ? "Deg sett rett ovenfra, fremme ved nettet." : "Deg sett rett ovenfra, bak i banen.";
+    Array.prototype.forEach.call(rail.querySelectorAll("button"), function (b, i) {
+      if (i === cur) b.setAttribute("aria-current", "step"); else b.removeAttribute("aria-current");
+      b.classList.toggle("done", i < cur);
+    });
+    $("prev").disabled = cur === 0;
+    $("next").disabled = cur === STEPS.length - 1;
+  }
+  function endOf(i) { var f = STEPS[i].frames(); return toState(f[f.length - 1]); }
+  function ease(t) { return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; }
+
+  function run(frames, done) {
+    var my = ++token, i = 0;
+    function nextFrame() {
+      if (my !== token) return;
+      if (i >= frames.length) { if (done) done(); return; }
+      var f = frames[i++], to = toState(f);
+      if (f.jump || reduce) { state = to; draw(state); nextFrame(); return; }
+      var from = state, t0 = performance.now(), dur = f.dur || 700;
+      (function tick(now) {
+        if (my !== token) return;
+        var t = Math.min(1, (now - t0) / dur);
+        state = lerpState(from, to, ease(t)); draw(state);
+        if (t < 1) requestAnimationFrame(tick); else nextFrame();
+      })(t0);
+    }
+    nextFrame();
+  }
+  function go(i, animate, done) {
+    cur = i; card();
+    token++;
+    if (!animate) { state = endOf(i); draw(state); return; }
+    state = i === 0 ? toState(STEPS[0].frames()[0]) : endOf(i - 1);
+    draw(state);
+    run(STEPS[i].frames(), done);
+  }
+  function stop() {
+    playing = false; clearTimeout(holdTimer);
+    $("play").textContent = "Spill av poenget";
+  }
+  function playFrom(i) {
+    if (!playing) return;
+    go(i, true, function () {
+      if (!playing) return;
+      if (i >= STEPS.length - 1) { stop(); return; }
+      holdTimer = setTimeout(function () { playFrom(i + 1); }, reduce ? 2600 : 1500);
+    });
+  }
+  $("play").addEventListener("click", function () {
+    if (playing) { stop(); return; }
+    playing = true; $("play").textContent = "Pause";
+    playFrom(cur === 0 || cur >= STEPS.length - 1 ? 0 : cur + 1);
+  });
+  $("prev").addEventListener("click", function () { stop(); if (cur > 0) go(cur - 1, true); });
+  $("next").addEventListener("click", function () { stop(); if (cur < STEPS.length - 1) go(cur + 1, true); });
+  document.addEventListener("keydown", function (e) {
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    if (e.key === "ArrowRight" && cur < STEPS.length - 1) { stop(); go(cur + 1, true); }
+    if (e.key === "ArrowLeft" && cur > 0) { stop(); go(cur - 1, true); }
+  });
+
+  function setMode(m) {
+    mode = m; setGeometry();
+    $("mode-fh").setAttribute("aria-pressed", String(m === "fh"));
+    $("mode-bh").setAttribute("aria-pressed", String(m === "bh"));
+    try { localStorage.setItem("padelslag", m); } catch (e) {}
+    stop(); drawMinis(); go(cur, false);
+  }
+  $("mode-fh").addEventListener("click", function () { setMode("fh"); });
+  $("mode-bh").addEventListener("click", function () { setMode("bh"); });
+
+  var saved = "fh";
+  try { if (localStorage.getItem("padelslag") === "bh") saved = "bh"; } catch (e) {}
+  setMode(saved);
+})();
+</script>

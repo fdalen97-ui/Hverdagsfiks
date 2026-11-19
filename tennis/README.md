@@ -28,5 +28,5 @@ Hovedideen er at slaget begynner lenge før jeg treffer ballen. Står jeg riktig
 - [Forehand](forehand.md) – de fire huskereglene og treffpunktet
 - [Tohånds backhand](backhand.md) – det samme, speilvendt
 - [Øvelser](øvelser.md) – øvelser for hvert steg og sjekkliste før økt
-- [Padel](padel.md) – hva som er likt og hva som er annerledes
+- [Padel](../padel/README.md) – egen mappe: hva som er likt og annerledes, og poenget steg for steg
 - [Logg](logg.md) – hva som fungerer og hva jeg må jobbe med
