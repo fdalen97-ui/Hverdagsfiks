@@ -1,0 +1,563 @@
+<meta charset="utf-8">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Tennisslaget steg for steg</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+/* Layout: step rail on top, then a three-part stage (court from above, player from above, cue card).
+   The two drawings always use hard-court colours; the page around them follows the theme. */
+:root {
+  --bg: #f1f5f3;
+  --surface: #ffffff;
+  --ink: #13251e;
+  --muted: #56675f;
+  --line: #d3dcd7;
+  --accent: #1d5c90;
+  --accent-ink: #ffffff;
+  --court: #2b6a9f;
+  --apron: #2c7a59;
+  --court-line: #ffffff;
+  --fig: #fbfcf8;
+  --fig-edge: #0d1b16;
+  --racket: #10201a;
+  --ball: #dcea3c;
+  --mark: #f0604a;
+  --display: "Sofia Sans Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --body: "Barlow", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1613; --surface: #15211d; --ink: #e7eeea; --muted: #9babA3; --line: #293932;
+    --accent: #8cc3f0; --accent-ink: #0b1a25; --court: #24598a; --apron: #235f47;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1613; --surface: #15211d; --ink: #e7eeea; --muted: #9babA3; --line: #293932;
+  --accent: #8cc3f0; --accent-ink: #0b1a25; --court: #24598a; --apron: #235f47;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--body); font-size: 16px; line-height: 1.5;
+}
+.wrap {
+  max-width: 1080px; margin: 0 auto;
+  padding-block: 28px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 28px;
+}
+h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.05; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); letter-spacing: -0.01em; text-transform: uppercase; }
+h2 { font-size: 1.7rem; text-transform: uppercase; letter-spacing: 0.01em; }
+p { margin: 0; }
+.eyebrow { font-family: var(--display); font-weight: 600; font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+
+header { display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: flex-end; justify-content: space-between; }
+header .intro { display: flex; flex-direction: column; gap: 8px; min-width: 0; flex: 1 1 420px; }
+header .lede { color: var(--muted); max-width: 56ch; }
+
+.seg { display: inline-flex; border: 1.5px solid var(--ink); border-radius: 4px; overflow: hidden; }
+.seg button {
+  font: 600 1.05rem var(--display); letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 8px 18px; border: 0; background: transparent; color: var(--ink); cursor: pointer;
+}
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+
+button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* step rail */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 6px; }
+.steps button {
+  width: 100%; height: 100%; display: flex; flex-direction: column; gap: 2px; align-items: flex-start;
+  padding: 8px 10px; background: transparent; color: var(--muted); cursor: pointer; text-align: left;
+  border: 0; border-top: 3px solid var(--line); font-family: var(--body);
+}
+.steps .n { font: 700 1.5rem/1 var(--display); font-variant-numeric: tabular-nums; }
+.steps .t { font-size: 0.82rem; font-weight: 500; line-height: 1.2; }
+.steps button.done { border-top-color: var(--muted); }
+.steps button[aria-current="step"] { border-top-color: var(--accent); color: var(--ink); }
+.steps button[aria-current="step"] .n { color: var(--accent); }
+
+/* stage */
+.stage { display: grid; grid-template-columns: 210px minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.view { display: flex; flex-direction: column; gap: 6px; min-width: 0; margin: 0; }
+.view figcaption, .cap { font-size: 0.82rem; color: var(--muted); }
+.view svg { display: block; width: 100%; height: auto; border-radius: 4px; }
+.pv { position: relative; }
+.pv .net { position: absolute; top: 8px; left: 0; right: 0; text-align: center; pointer-events: none;
+  font: 600 0.8rem var(--display); letter-spacing: 0.14em; text-transform: uppercase; color: var(--court-line); opacity: 0.85; }
+
+.card { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.card .num { font: 700 1rem var(--display); letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.card h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); }
+.card .cue { font-size: 1.15rem; font-weight: 600; line-height: 1.35; }
+.card ul { margin: 0; padding-left: 1.1em; display: flex; flex-direction: column; gap: 6px; }
+.card .check { border-top: 1px solid var(--line); padding-top: 12px; color: var(--muted); }
+.card .check b { color: var(--ink); font-weight: 600; }
+.ctrl { display: flex; flex-wrap: wrap; gap: 8px; }
+.ctrl button {
+  font: 600 1.05rem var(--display); letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 10px 18px; border-radius: 4px; cursor: pointer;
+  border: 1.5px solid var(--ink); background: transparent; color: var(--ink);
+}
+.ctrl button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.ctrl button:disabled { opacity: 0.35; cursor: default; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 0.85rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 7px; }
+.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 1.5px solid var(--fig-edge); }
+.legend .lb { background: var(--ball); }
+.legend .lm { background: var(--mark); }
+.legend .lf { background: var(--mark); width: 9px; height: 15px; border-radius: 50%; }
+.legend .lh { background: transparent; border: 1.5px dashed var(--muted); }
+
+/* checks */
+.checks { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+.checks section { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.checks p { color: var(--muted); max-width: 60ch; }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.pair .view figcaption b { color: var(--ink); font-weight: 600; }
+
+.short { border-top: 1px solid var(--line); padding-top: 20px; display: flex; flex-direction: column; gap: 6px; }
+.short p { font: 600 clamp(1.2rem, 3.4vw, 1.6rem)/1.25 var(--display); letter-spacing: 0.02em; text-transform: uppercase; }
+.short p span { color: var(--muted); padding: 0 0.15em; }
+
+@media (max-width: 860px) {
+  .stage { grid-template-columns: minmax(0, 0.52fr) minmax(0, 1fr); gap: 12px; }
+  .stage .card { grid-column: 1 / -1; }
+  .checks { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 620px) {
+  .steps { gap: 4px; }
+  .steps button { align-items: center; padding: 8px 0; }
+  .steps .t { display: none; }
+}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="intro">
+      <p class="eyebrow">Tennis · høyrehendt · tohånds backhand</p>
+      <h1>Slaget steg for steg</h1>
+      <p class="lede">Slaget begynner lenge før du treffer ballen. Gå gjennom de åtte stegene ett for ett, eller spill av hele slaget og følg med på racketen, skuldrene og føttene.</p>
+    </div>
+    <div class="seg" role="group" aria-label="Velg slag">
+      <button type="button" id="mode-fh" aria-pressed="true">Forehand</button>
+      <button type="button" id="mode-bh" aria-pressed="false">Backhand</button>
+    </div>
+  </header>
+
+  <ol class="steps" id="steps"></ol>
+
+  <div class="stage">
+    <figure class="view">
+      <svg id="court" viewBox="-85 -150 170 303" role="img" aria-label="Banen sett ovenfra, med deg nederst, motstanderen øverst og ballens bane"></svg>
+      <figcaption>Banen ovenfra. Du står nederst.</figcaption>
+    </figure>
+    <figure class="view">
+      <div class="pv">
+        <svg id="player" viewBox="-125 -148 250 250" role="img" aria-label="Deg sett rett ovenfra: hode, skuldre, hofter, føtter og racket"></svg>
+        <span class="net" aria-hidden="true">Nettet ↑</span>
+      </div>
+      <figcaption>Deg sett rett ovenfra, med baklinja foran deg.</figcaption>
+    </figure>
+    <div class="card" aria-live="polite">
+      <p class="num" id="c-num"></p>
+      <h2 id="c-title"></h2>
+      <p class="cue" id="c-cue"></p>
+      <ul id="c-list"></ul>
+      <p class="check" id="c-check"></p>
+      <div class="ctrl">
+        <button type="button" id="prev">Forrige</button>
+        <button type="button" id="play" class="primary">Spill av slaget</button>
+        <button type="button" id="next">Neste</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <span><i class="lb"></i>Ballen</span>
+    <span><i class="lf"></i>Rød fot: der tyngdepunktet er</span>
+    <span><i class="lm"></i>Rød prikk: enden av skaftet</span>
+    <span><i class="lh"></i>Stiplet ring: midten av banen</span>
+  </div>
+
+  <div class="checks">
+    <section>
+      <h2>Treffpunktet</h2>
+      <p>Den stiplede linja viser forsiden av kroppen. Ballen skal treffes foran den. Treffer du for sent, havner ballen ved siden av deg, og da slår du bare med armen. Løsningen er nesten alltid å åpne racketen tidligere.</p>
+      <div class="pair">
+        <figure class="view">
+          <svg id="mini-ok" viewBox="-115 -110 230 200" role="img" aria-label="Riktig treffpunkt: ballen er foran kroppen"></svg>
+          <figcaption><b>Riktig.</b> Ballen er foran kroppen.</figcaption>
+        </figure>
+        <figure class="view">
+          <svg id="mini-late" viewBox="-115 -110 230 200" role="img" aria-label="For sent: ballen er ved siden av kroppen"></svg>
+          <figcaption><b>For sent.</b> Ballen er ved siden av kroppen.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section>
+      <h2>Fullføringen</h2>
+      <p id="finish-text"></p>
+      <figure class="view">
+        <svg viewBox="0 0 360 250" role="img" aria-label="Fullført forehand sett forfra: bicepsen ved haken, håndleddet oppe ved ansiktet og racketen over venstre skulder">
+          <rect x="0" y="0" width="360" height="250" fill="var(--court)"/>
+          <rect x="0" y="226" width="360" height="24" fill="var(--apron)"/>
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <!-- racket behind the left shoulder -->
+            <path d="M190 50 L212 90" stroke="var(--racket)" stroke-width="5"/>
+            <ellipse cx="221" cy="107" rx="13" ry="21" transform="rotate(-28 221 107)" stroke="var(--racket)" stroke-width="5"/>
+            <!-- legs -->
+            <path d="M140 152 L128 226 M160 152 L176 226" stroke="var(--fig-edge)" stroke-width="13"/>
+            <path d="M140 152 L128 226 M160 152 L176 226" stroke="var(--fig)" stroke-width="9"/>
+            <!-- torso -->
+            <path d="M120 80 L180 80 L166 154 L134 154 Z" fill="var(--fig)" stroke="var(--fig-edge)" stroke-width="2"/>
+            <!-- left arm -->
+            <path d="M180 84 L196 120 L176 138" stroke="var(--fig-edge)" stroke-width="11"/>
+            <path d="M180 84 L196 120 L176 138" stroke="var(--fig)" stroke-width="7"/>
+            <!-- head -->
+            <circle cx="150" cy="52" r="17" fill="var(--fig)" stroke="var(--fig-edge)" stroke-width="2"/>
+            <!-- hitting arm across the chest -->
+            <path d="M120 84 L162 73 L190 50" stroke="var(--fig-edge)" stroke-width="12"/>
+            <path d="M120 84 L162 73 L190 50" stroke="var(--fig)" stroke-width="8"/>
+            <circle cx="190" cy="50" r="5" fill="var(--mark)" stroke="var(--fig-edge)" stroke-width="1.5"/>
+            <!-- leaders -->
+            <path d="M70 110 L138 82 M236 36 L198 47 M250 132 L232 116" stroke="var(--court-line)" stroke-width="1.2"/>
+          </g>
+          <g fill="var(--court-line)" font-family="Barlow, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="500">
+            <text x="8" y="126">Bicepsen mot haken</text>
+            <text x="240" y="32">Klokka: håndleddet</text>
+            <text x="240" y="47">oppe ved ansiktet</text>
+            <text x="244" y="148">Racketen over</text>
+            <text x="244" y="163">venstre skulder</text>
+          </g>
+        </svg>
+        <figcaption>Fullført forehand sett forfra. Din venstre skulder er til høyre i bildet.</figcaption>
+      </figure>
+    </section>
+  </div>
+
+  <div class="short">
+    <p class="eyebrow">Kortversjonen på banen</p>
+    <p>Midten <span>→</span> klar <span>→</span> åpne <span>→</span> løp <span>→</span> lad <span>→</span> slå foran <span>→</span> fullfør <span>→</span> midten</p>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- court geometry, metres, origin at the centre of the net ---------- */
+  var BASE = 11.885, SINGLE = 4.115, DOUBLE = 5.485, SERVICE = 6.4;
+  var CONTACT_OFF = { x: 0.64, y: -0.57 };            // ball relative to you at contact
+  var FH = {
+    A: { x: 0.3, y: -11.6 }, B: { x: 2.4, y: 7.8 }, C: { x: 2.85, y: 11.8 }, D: { x: -2.6, y: -10.4 },
+    HOME: { x: 0, y: 12.6 }, SIDE: { x: -1.9, y: 12.3 }
+  };
+  FH.HIT = { x: FH.C.x - CONTACT_OFF.x, y: FH.C.y - CONTACT_OFF.y };
+
+  /* ---------- poses seen from above, centimetres, the net is up (negative y) ---------- */
+  var P = {
+    walk:    { sh: 0,   hip: 0,   H: [28, -10],  T: [36, -71],  lFree: [-28, -12], lOn: 0, lFrac: 0.42, fL: [-15, 10],  fR: [15, -4],  w: 0.5 },
+    ready:   { sh: 0,   hip: 0,   H: [4, -24],   T: [-4, -86],  lFree: [-20, -20], lOn: 1, lFrac: 0.42, fL: [-17, 8],   fR: [17, 8],   w: 0.5 },
+    unit:    { sh: 55,  hip: 30,  H: [30, -12],  T: [52, -70],  lFree: [20, -30],  lOn: 1, lFrac: 0.42, fL: [-14, 0],   fR: [18, 12],  w: 0.6 },
+    load:    { sh: 85,  hip: 55,  H: [34, 30],   T: [44, 92],   lFree: [42, -26],  lOn: 0, lFrac: 0.42, fL: [-10, -16], fR: [20, 18],  w: 0.92 },
+    lag:     { sh: 40,  hip: 10,  H: [40, 2],    T: [52, 63],   lFree: [-30, -30], lOn: 0, lFrac: 0.42, fL: [-10, -16], fR: [20, 18],  w: 0.5 },
+    contact: { sh: -5,  hip: -15, H: [22, -44],  T: [84, -50],  lFree: [-30, -16], lOn: 0, lFrac: 0.42, fL: [-10, -16], fR: [20, 16],  w: 0.25 },
+    finish:  { sh: -70, hip: -45, H: [-22, -8],  T: [-30, 52],  lFree: [-24, 6],   lOn: 0, lFrac: 0.42, fL: [-10, -16], fR: [16, 8],   w: 0.12 },
+    late:    { sh: 50,  hip: 30,  H: [40, -4],   T: [100, 8],   lFree: [-6, -30],  lOn: 0, lFrac: 0.42, fL: [-10, -16], fR: [20, 18],  w: 0.7 }
+  };
+  function mirrorPose(p) {            // two-handed backhand: the forehand mirrored, both hands on the grip
+    return { sh: -p.sh, hip: -p.hip, H: [-p.H[0], p.H[1]], T: [-p.T[0], p.T[1]], lFree: [-p.lFree[0], p.lFree[1]],
+      lOn: 1, lFrac: 0.16, fL: [-p.fR[0], p.fR[1]], fR: [-p.fL[0], p.fL[1]], w: 1 - p.w };
+  }
+  function mirrorPt(v) { return { x: -v.x, y: v.y }; }
+
+  var mode = "fh", G, POSE;
+  function setGeometry() {
+    G = {}; POSE = {};
+    Object.keys(FH).forEach(function (k) { G[k] = mode === "bh" ? mirrorPt(FH[k]) : FH[k]; });
+    Object.keys(P).forEach(function (k) {
+      POSE[k] = (mode === "bh" && k !== "ready" && k !== "walk") ? mirrorPose(P[k]) : P[k];
+    });
+  }
+
+  /* ---------- the eight steps ---------- */
+  var STEPS = [
+    { t: "Midten", title: "Midten av banen",
+      cue: "Stå i midten før motstanderen slår.",
+      list: ["Fra midten rekker du begge sider og har kontroll.", "Gå tilbake hit etter hvert slag. Ikke bli stående og se på ditt eget slag."],
+      check: "Du står i midten før motstanderen treffer ballen.",
+      frames: function () { return [{ at: G.SIDE, bp: 0, pose: "walk", jump: true }, { at: G.HOME, bp: 0, pose: "walk", dur: 1000 }]; } },
+    { t: "Klar", title: "Klarstilling",
+      cue: "Stå fremme, med racketen foran kroppen i begge hender.",
+      list: ["Høyre hånd nederst på skaftet, venstre hånd over.", "Vekten frem på forfoten og lett bøyde knær."],
+      check: "Det er like kort vei til forehand og backhand.",
+      frames: function () { return [{ at: G.HOME, bp: 0.03, pose: "ready", dur: 600 }]; } },
+    { t: "Åpne", title: "Åpne racketen med en gang",
+      cue: { fh: "Racketen litt til høyre straks du ser at ballen kommer på forehand.", bh: "Racketen litt til venstre straks du ser at ballen kommer på backhand." },
+      list: ["Skuldrene snur sammen med racketen.", "Gjør det mens ballen er på vei mot deg, ikke når den er fremme."],
+      check: "Racketen er klar før ballen spretter på din side.",
+      frames: function () { return [{ at: G.HOME, bp: 0.32, pose: "unit", dur: 700 }]; } },
+    { t: "Løp", title: "Løp og still deg opp",
+      cue: "Vær på plass i god tid før ballen kommer.",
+      list: ["Løp med racketen klar, så trenger du bare å slå når du er fremme.", "Små steg til slutt, så avstanden til ballen blir riktig.", "Still deg bak ballen, så du kan treffe den foran deg."],
+      check: "Du står stille og i balanse idet du slår.",
+      frames: function () { return [{ at: G.HIT, bp: 0.84, pose: "unit", dur: 1100 }]; } },
+    { t: "Lad", title: "Lad opp",
+      cue: { fh: "Tyngdepunktet på høyre bein, det bakre. Det gir kontroll.", bh: "Tyngdepunktet på venstre bein, det bakre. Det gir kontroll." },
+      list: { fh: ["Skuldrene snur til ryggen nesten vender mot nettet.", "Venstre hånd peker mot ballen."],
+              bh: ["Skuldrene snur til ryggen nesten vender mot nettet.", "Begge hender blir på skaftet hele veien."] },
+      check: "Du ser ballen over den fremste skulderen.",
+      frames: function () { return [{ at: G.HIT, bp: 1.2, pose: "load", dur: 700 }]; } },
+    { t: "Slå", title: "Slå",
+      cue: "Hofta først. Treff ballen foran deg, ikke ved siden av.",
+      list: { fh: ["Hofte og skuldre tar mye av kraften. Armen er avslappet.", "Racketen viser motsatt vei: enden av skaftet peker mot ballen før racketen snur.", "Vekten går fra bakre til fremre bein."],
+              bh: ["Hofte og skuldre tar mye av kraften. Venstre hånd driver, høyre styrer.", "Racketen viser motsatt vei: enden av skaftet peker mot ballen før racketen snur.", "Vekten går fra bakre til fremre bein."] },
+      check: "Ballen får fart uten at du presser med armen.",
+      frames: function () { return [{ at: G.HIT, bp: 1.72, pose: "lag", dur: 650 }, { at: G.HIT, bp: 2, pose: "contact", dur: 420 }]; } },
+    { t: "Fullfør", title: "Fullfør slaget",
+      cue: { fh: "Sving helt gjennom: kyss bicepsen, eller se på klokka.", bh: "Sving helt gjennom med begge hender, til racketen er over høyre skulder." },
+      list: { fh: ["Ikke stopp i treffet. Fullfør hver gang.", "Racketen ender over venstre skulder.", "Åttetallet er valgfritt: la racketen flyte i en bue rett tilbake til klarstilling."],
+              bh: ["Ikke stopp i treffet. Fullfør hver gang.", "Hendene ender oppe ved høyre skulder.", "Åttetallet er valgfritt: la racketen flyte i en bue rett tilbake til klarstilling."] },
+      check: "Du kan fryse i to sekunder og stå i balanse.",
+      frames: function () { return [{ at: G.HIT, bp: 2.3, pose: "finish", dur: 600 }]; } },
+    { t: "Midten", title: "Tilbake til midten",
+      cue: "Slaget er ikke ferdig før du står i midten igjen.",
+      list: ["Racketen tilbake foran kroppen i begge hender.", "Se på motstanderen, klar for neste ball."],
+      check: "Du er i klarstilling før motstanderen slår.",
+      frames: function () { return [{ at: G.HOME, bp: 2.85, pose: "ready", dur: 1100 }]; } }
+  ];
+  function pick(v) { return (v && v.fh) ? v[mode] : v; }
+
+  /* ---------- helpers ---------- */
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  function lerp2(a, b, t) { return [lerp(a[0], b[0], t), lerp(a[1], b[1], t)]; }
+  function lerpPose(a, b, t) {
+    return { sh: lerp(a.sh, b.sh, t), hip: lerp(a.hip, b.hip, t), H: lerp2(a.H, b.H, t), T: lerp2(a.T, b.T, t),
+      lFree: lerp2(a.lFree, b.lFree, t), lOn: lerp(a.lOn, b.lOn, t), lFrac: lerp(a.lFrac, b.lFrac, t),
+      fL: lerp2(a.fL, b.fL, t), fR: lerp2(a.fR, b.fR, t), w: lerp(a.w, b.w, t) };
+  }
+  function toState(f) { return { px: f.at.x, py: f.at.y, bp: f.bp, pose: POSE[f.pose] }; }
+  function lerpState(a, b, t) {
+    return { px: lerp(a.px, b.px, t), py: lerp(a.py, b.py, t), bp: lerp(a.bp, b.bp, t), pose: lerpPose(a.pose, b.pose, t) };
+  }
+  function ballAt(bp) {
+    var pts = [G.A, G.B, G.C, G.D];
+    var i = Math.min(2, Math.max(0, Math.floor(bp))), t = Math.min(1, Math.max(0, bp - i));
+    return { x: lerp(pts[i].x, pts[i + 1].x, t), y: lerp(pts[i].y, pts[i + 1].y, t) };
+  }
+  function f1(n) { return Math.round(n * 10) / 10; }
+  function pt(a) { return f1(a[0]) + "," + f1(a[1]); }
+  function limb(points, w, color) {
+    var d = points.map(pt).join(" ");
+    return '<polyline points="' + d + '" fill="none" stroke="var(--fig-edge)" stroke-width="' + (w + 3.5) + '" stroke-linecap="round" stroke-linejoin="round"/>' +
+           '<polyline points="' + d + '" fill="none" stroke="' + (color || "var(--fig)") + '" stroke-width="' + w + '" stroke-linecap="round" stroke-linejoin="round"/>';
+  }
+  function line(deg, half) {
+    var r = deg * Math.PI / 180, c = Math.cos(r) * half, s = Math.sin(r) * half;
+    return [[-c, -s], [c, s]];
+  }
+  function arm(s, h) {                 // shoulder, hand -> shoulder, elbow, hand
+    var dx = h[0] - s[0], dy = h[1] - s[1], d = Math.hypot(dx, dy), L = 32;
+    if (d < 0.01 || d >= 2 * L) return [s, h];
+    var hh = Math.sqrt(L * L - d * d / 4) * 0.6, m = [(s[0] + h[0]) / 2, (s[1] + h[1]) / 2];
+    var n = [-dy / d * hh, dx / d * hh];
+    var e1 = [m[0] + n[0], m[1] + n[1]], e2 = [m[0] - n[0], m[1] - n[1]];
+    return [s, Math.hypot(e1[0], e1[1]) > Math.hypot(e2[0], e2[1]) ? e1 : e2, h];
+  }
+
+  /* ---------- the figure seen from above ---------- */
+  function figure(p, ball, look) {
+    var S = line(p.sh, 22), Hp = line(p.hip, 13);
+    var H = p.H, T = p.T;
+    var on = lerp2(H, T, p.lFrac);
+    var lHand = lerp2(p.lFree, on, p.lOn);
+    var butt = lerp2(H, T, -0.1), throat = lerp2(H, T, 0.48);
+    var out = "";
+    function foot(f, share) {
+      return '<ellipse cx="' + f1(f[0]) + '" cy="' + f1(f[1] + 4) + '" rx="7.5" ry="13" transform="rotate(' + f1(p.hip * 0.7) + " " + f1(f[0]) + " " + f1(f[1] + 4) + ')" fill="var(--fig)" stroke="var(--fig-edge)" stroke-width="2"/>' +
+             '<ellipse cx="' + f1(f[0]) + '" cy="' + f1(f[1] + 4) + '" rx="7.5" ry="13" transform="rotate(' + f1(p.hip * 0.7) + " " + f1(f[0]) + " " + f1(f[1] + 4) + ')" fill="var(--mark)" fill-opacity="' + f1(Math.pow(share, 1.6)) + '"/>';
+    }
+    out += foot(p.fL, 1 - p.w) + foot(p.fR, p.w);
+    out += '<polyline points="' + pt([Hp[0][0], Hp[0][1] + 5]) + " " + pt([Hp[1][0], Hp[1][1] + 5]) + '" stroke="var(--fig-edge)" stroke-opacity="0.55" stroke-width="19" stroke-linecap="round" fill="none"/>';
+    out += limb(S, 14);
+    out += limb(arm(S[0], lHand), 6.5);
+    out += limb(arm(S[1], H), 6.5);
+    // racket: handle, then the head seen edge-on
+    out += '<polyline points="' + pt(butt) + " " + pt(throat) + '" stroke="var(--racket)" stroke-width="4.5" stroke-linecap="round" fill="none"/>';
+    out += '<polyline points="' + pt(throat) + " " + pt(T) + '" stroke="var(--court-line)" stroke-width="10" stroke-linecap="round" fill="none"/>';
+    out += '<polyline points="' + pt(throat) + " " + pt(T) + '" stroke="var(--racket)" stroke-width="7" stroke-linecap="round" fill="none"/>';
+    out += '<circle cx="' + f1(lHand[0]) + '" cy="' + f1(lHand[1]) + '" r="4.5" fill="var(--fig)" stroke="var(--fig-edge)" stroke-width="1.5"/>';
+    out += '<circle cx="' + f1(H[0]) + '" cy="' + f1(H[1]) + '" r="4.5" fill="var(--fig)" stroke="var(--fig-edge)" stroke-width="1.5"/>';
+    out += '<circle cx="' + f1(butt[0]) + '" cy="' + f1(butt[1]) + '" r="4" fill="var(--mark)" stroke="var(--fig-edge)" stroke-width="1.5"/>';
+    // head, looking at the ball
+    var gx = 0, gy = -1;
+    var g = look || ball;
+    if (g) { var gd = Math.hypot(g[0], g[1]); if (gd > 1) { gx = g[0] / gd; gy = g[1] / gd; } }
+    out += '<circle cx="0" cy="0" r="12" fill="var(--fig)" stroke="var(--fig-edge)" stroke-width="2"/>';
+    out += '<circle cx="' + f1(gx * 7.5) + '" cy="' + f1(gy * 7.5) + '" r="2.6" fill="var(--fig-edge)"/>';
+    if (ball) out += '<circle cx="' + f1(ball[0]) + '" cy="' + f1(ball[1]) + '" r="6.5" fill="var(--ball)" stroke="var(--fig-edge)" stroke-width="1.5"/>';
+    return out;
+  }
+
+  /* ---------- drawing the two views ---------- */
+  var courtSvg = $("court"), playerSvg = $("player");
+  var k = 10; // court view: 1 m = 10 units
+  var courtStatic =
+    '<rect x="-85" y="-150" width="170" height="303" fill="var(--apron)"/>' +
+    '<rect x="' + (-DOUBLE * k) + '" y="' + (-BASE * k) + '" width="' + (2 * DOUBLE * k) + '" height="' + (2 * BASE * k) + '" fill="var(--court)" stroke="var(--court-line)" stroke-width="1"/>' +
+    '<g stroke="var(--court-line)" stroke-width="1" fill="none">' +
+    '<line x1="' + (-SINGLE * k) + '" y1="' + (-BASE * k) + '" x2="' + (-SINGLE * k) + '" y2="' + (BASE * k) + '"/>' +
+    '<line x1="' + (SINGLE * k) + '" y1="' + (-BASE * k) + '" x2="' + (SINGLE * k) + '" y2="' + (BASE * k) + '"/>' +
+    '<line x1="' + (-SINGLE * k) + '" y1="' + (-SERVICE * k) + '" x2="' + (SINGLE * k) + '" y2="' + (-SERVICE * k) + '"/>' +
+    '<line x1="' + (-SINGLE * k) + '" y1="' + (SERVICE * k) + '" x2="' + (SINGLE * k) + '" y2="' + (SERVICE * k) + '"/>' +
+    '<line x1="0" y1="' + (-SERVICE * k) + '" x2="0" y2="' + (SERVICE * k) + '"/>' +
+    '<line x1="0" y1="' + (BASE * k) + '" x2="0" y2="' + (BASE * k - 3) + '"/>' +
+    '<line x1="0" y1="' + (-BASE * k) + '" x2="0" y2="' + (-BASE * k + 3) + '"/>' +
+    '</g>' +
+    '<line x1="' + (-(DOUBLE + 0.9) * k) + '" y1="0" x2="' + ((DOUBLE + 0.9) * k) + '" y2="0" stroke="var(--fig-edge)" stroke-width="2.4"/>' +
+    '<line x1="' + (-(DOUBLE + 0.9) * k) + '" y1="0" x2="' + ((DOUBLE + 0.9) * k) + '" y2="0" stroke="var(--court-line)" stroke-width="0.9" stroke-dasharray="1.5 1.5"/>';
+
+  function draw(s) {
+    var b = ballAt(s.bp);
+    // court view
+    var trail = [G.A];
+    if (s.bp > 1) trail.push(G.B);
+    if (s.bp > 2) trail.push(G.C);
+    trail.push(b);
+    var c = courtStatic;
+    c += '<circle cx="' + f1(G.HOME.x * k) + '" cy="' + f1(G.HOME.y * k) + '" r="6" fill="none" stroke="var(--court-line)" stroke-width="1" stroke-dasharray="2 1.6"/>';
+    if (Math.hypot(s.px - G.HOME.x, s.py - G.HOME.y) > 0.15)
+      c += '<line x1="' + f1(G.HOME.x * k) + '" y1="' + f1(G.HOME.y * k) + '" x2="' + f1(s.px * k) + '" y2="' + f1(s.py * k) + '" stroke="var(--court-line)" stroke-width="1" stroke-dasharray="2 2" opacity="0.8"/>';
+    if (s.bp > 0.01)
+      c += '<polyline points="' + trail.map(function (q) { return f1(q.x * k) + "," + f1(q.y * k); }).join(" ") + '" fill="none" stroke="var(--ball)" stroke-width="1.3" stroke-dasharray="3 2" stroke-linejoin="round"/>';
+    if (s.bp >= 1) c += '<circle cx="' + f1(G.B.x * k) + '" cy="' + f1(G.B.y * k) + '" r="2.6" fill="none" stroke="var(--ball)" stroke-width="1"/>';
+    c += '<circle cx="' + f1(G.A.x * k) + '" cy="' + f1(-12.5 * k) + '" r="4" fill="none" stroke="var(--fig)" stroke-width="1.6"/>';
+    c += '<circle cx="' + f1(s.px * k) + '" cy="' + f1(s.py * k) + '" r="4.4" fill="var(--fig)" stroke="var(--fig-edge)" stroke-width="1.4"/>';
+    c += '<circle cx="' + f1(b.x * k) + '" cy="' + f1(b.y * k) + '" r="2.8" fill="var(--ball)" stroke="var(--fig-edge)" stroke-width="0.8"/>';
+    courtSvg.innerHTML = c;
+
+    // player view, centimetres around you
+    var by = (BASE - s.py) * 100, cx = (0 - s.px) * 100;
+    var local = [(b.x - s.px) * 100, (b.y - s.py) * 100];
+    var visible = Math.abs(local[0]) < 138 && local[1] > -162 && local[1] < 112;
+    var p = '<rect x="-125" y="-148" width="250" height="250" fill="var(--apron)"/>' +
+      '<rect x="-125" y="-148" width="250" height="' + f1(Math.max(0, by + 148)) + '" fill="var(--court)"/>' +
+      '<line x1="-125" y1="' + f1(by) + '" x2="125" y2="' + f1(by) + '" stroke="var(--court-line)" stroke-width="6"/>' +
+      '<line x1="' + f1(cx) + '" y1="' + f1(by) + '" x2="' + f1(cx) + '" y2="' + f1(by - 14) + '" stroke="var(--court-line)" stroke-width="6"/>';
+    p += figure(s.pose, visible ? local : null, local);
+    playerSvg.innerHTML = p;
+  }
+
+  function drawMinis() {
+    var bg = '<rect x="-115" y="-110" width="230" height="200" fill="var(--court)"/>' +
+      '<line x1="-115" y1="-20" x2="115" y2="-20" stroke="var(--court-line)" stroke-width="1.6" stroke-dasharray="6 5" opacity="0.9"/>';
+    var sgn = mode === "bh" ? -1 : 1;
+    $("mini-ok").innerHTML = bg + figure(POSE.contact, [sgn * 64, -57]);
+    $("mini-late").innerHTML = bg + figure(POSE.late, [sgn * 82, -7]);
+    $("finish-text").textContent = mode === "bh"
+      ? "På tohånds backhand ender begge hender oppe ved høyre skulder. Figuren viser forehanden, der du kan kysse bicepsen eller se på klokka."
+      : "To bilder på det samme: armen ender så høyt at du kan kysse bicepsen, eller se på en klokke på håndleddet.";
+  }
+
+  /* ---------- step rail and card ---------- */
+  var cur = 0, state, token = 0, playing = false, holdTimer = null;
+  var rail = $("steps");
+  STEPS.forEach(function (s, i) {
+    var li = document.createElement("li"), b = document.createElement("button");
+    b.type = "button"; b.id = "step-" + (i + 1);
+    b.setAttribute("aria-label", "Steg " + (i + 1) + ": " + s.title);
+    b.innerHTML = '<span class="n">' + (i + 1) + '</span><span class="t">' + s.t + "</span>";
+    b.addEventListener("click", function () { stop(); go(i, true); });
+    li.appendChild(b); rail.appendChild(li);
+  });
+
+  function card() {
+    var s = STEPS[cur];
+    $("c-num").textContent = "Steg " + (cur + 1) + " av 8 · " + (mode === "bh" ? "backhand" : "forehand");
+    $("c-title").textContent = s.title;
+    $("c-cue").textContent = pick(s.cue);
+    $("c-list").innerHTML = pick(s.list).map(function (x) { return "<li>" + x + "</li>"; }).join("");
+    $("c-check").innerHTML = "<b>Kjennetegn:</b> " + s.check;
+    Array.prototype.forEach.call(rail.querySelectorAll("button"), function (b, i) {
+      if (i === cur) b.setAttribute("aria-current", "step"); else b.removeAttribute("aria-current");
+      b.classList.toggle("done", i < cur);
+    });
+    $("prev").disabled = cur === 0;
+    $("next").disabled = cur === STEPS.length - 1;
+  }
+  function endOf(i) { var f = STEPS[i].frames(); return toState(f[f.length - 1]); }
+  function ease(t) { return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; }
+
+  function run(frames, done) {
+    var my = ++token, i = 0;
+    function nextFrame() {
+      if (my !== token) return;
+      if (i >= frames.length) { if (done) done(); return; }
+      var f = frames[i++], to = toState(f);
+      if (f.jump || reduce) { state = to; draw(state); nextFrame(); return; }
+      var from = state, t0 = performance.now(), dur = f.dur || 700;
+      (function tick(now) {
+        if (my !== token) return;
+        var t = Math.min(1, (now - t0) / dur);
+        state = lerpState(from, to, ease(t)); draw(state);
+        if (t < 1) requestAnimationFrame(tick); else nextFrame();
+      })(t0);
+    }
+    nextFrame();
+  }
+  function go(i, animate, done) {
+    cur = i; card();
+    if (!animate) { token++; state = endOf(i); draw(state); return; }
+    token++;
+    state = i === 0 ? toState(STEPS[0].frames()[0]) : endOf(i - 1);
+    draw(state);
+    run(STEPS[i].frames(), done);
+  }
+  function stop() {
+    playing = false; clearTimeout(holdTimer);
+    $("play").textContent = "Spill av slaget";
+  }
+  function playFrom(i) {
+    if (!playing) return;
+    go(i, true, function () {
+      if (!playing) return;
+      if (i >= STEPS.length - 1) { stop(); return; }
+      holdTimer = setTimeout(function () { playFrom(i + 1); }, reduce ? 2600 : 1500);
+    });
+  }
+  $("play").addEventListener("click", function () {
+    if (playing) { stop(); return; }
+    playing = true; $("play").textContent = "Pause";
+    playFrom(cur === 0 || cur >= STEPS.length - 1 ? 0 : cur + 1);
+  });
+  $("prev").addEventListener("click", function () { stop(); if (cur > 0) go(cur - 1, true); });
+  $("next").addEventListener("click", function () { stop(); if (cur < STEPS.length - 1) go(cur + 1, true); });
+  document.addEventListener("keydown", function (e) {
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    if (e.key === "ArrowRight" && cur < STEPS.length - 1) { stop(); go(cur + 1, true); }
+    if (e.key === "ArrowLeft" && cur > 0) { stop(); go(cur - 1, true); }
+  });
+
+  function setMode(m) {
+    mode = m; setGeometry();
+    $("mode-fh").setAttribute("aria-pressed", String(m === "fh"));
+    $("mode-bh").setAttribute("aria-pressed", String(m === "bh"));
+    try { localStorage.setItem("slag", m); } catch (e) {}
+    stop(); drawMinis(); go(cur, false);
+  }
+  $("mode-fh").addEventListener("click", function () { setMode("fh"); });
+  $("mode-bh").addEventListener("click", function () { setMode("bh"); });
+
+  var saved = "fh";
+  try { if (localStorage.getItem("slag") === "bh") saved = "bh"; } catch (e) {}
+  setMode(saved);
+})();
+</script>

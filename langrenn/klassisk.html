@@ -1,0 +1,582 @@
+<meta charset="utf-8">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Klassisk langrenn steg for steg</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+/* Layout: technique switch and step rail on top, then the skier seen from the side next to a cue card.
+   The drawing keeps its own winter daylight colours; the page around it follows the theme. */
+:root {
+  --bg: #f1f4f6;
+  --surface: #ffffff;
+  --ink: #14222e;
+  --muted: #56646f;
+  --line: #d2dae0;
+  --accent: #1d5c90;
+  --accent-ink: #ffffff;
+  --sky: #cfdde8;
+  --hill: #b4c7d6;
+  --tree: #5f7f77;
+  --snow: #f7fafc;
+  --snow-edge: #c3d0da;
+  --suit: #17324d;
+  --suit-far: #7e95a8;
+  --pole: #2b3d4c;
+  --pole-far: #8fa2b1;
+  --mark: #e8503a;
+  --display: "Sofia Sans Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --body: "Barlow", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d141a; --surface: #151f27; --ink: #e6edf2; --muted: #98a8b4; --line: #27343f;
+    --accent: #8cc3f0; --accent-ink: #0b1a25; --sky: #b7c8d5; --hill: #9db2c2; --snow: #e9eff3; --snow-edge: #b3c2cd;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d141a; --surface: #151f27; --ink: #e6edf2; --muted: #98a8b4; --line: #27343f;
+  --accent: #8cc3f0; --accent-ink: #0b1a25; --sky: #b7c8d5; --hill: #9db2c2; --snow: #e9eff3; --snow-edge: #b3c2cd;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.5; }
+.wrap {
+  max-width: 1080px; margin: 0 auto;
+  padding-block: 28px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 28px;
+}
+h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.05; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); text-transform: uppercase; }
+h2 { font-size: 1.7rem; text-transform: uppercase; letter-spacing: 0.01em; }
+h3 { font-size: 1.25rem; text-transform: uppercase; letter-spacing: 0.03em; }
+p { margin: 0; }
+.eyebrow { font-family: var(--display); font-weight: 600; font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+
+header { display: flex; flex-direction: column; gap: 18px; }
+header .intro { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+header .lede { color: var(--muted); max-width: 60ch; }
+.pick { display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: center; }
+.pick .when { color: var(--muted); font-size: 0.95rem; min-width: 0; flex: 1 1 240px; }
+.pick .when b { color: var(--ink); font-weight: 600; }
+
+.seg { display: inline-flex; border: 1.5px solid var(--ink); border-radius: 4px; overflow: hidden; max-width: 100%; }
+.seg button {
+  font: 600 1.05rem var(--display); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap;
+  padding: 8px 16px; border: 0; background: transparent; color: var(--ink); cursor: pointer;
+}
+.seg button + button { border-left: 1.5px solid var(--ink); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 6px; }
+.steps button {
+  width: 100%; height: 100%; display: flex; flex-direction: column; gap: 2px; align-items: flex-start;
+  padding: 8px 10px; background: transparent; color: var(--muted); cursor: pointer; text-align: left;
+  border: 0; border-top: 3px solid var(--line); font-family: var(--body);
+}
+.steps .n { font: 700 1.5rem/1 var(--display); font-variant-numeric: tabular-nums; }
+.steps .t { font-size: 0.82rem; font-weight: 500; line-height: 1.2; }
+.steps button.done { border-top-color: var(--muted); }
+.steps button[aria-current="step"] { border-top-color: var(--accent); color: var(--ink); }
+.steps button[aria-current="step"] .n { color: var(--accent); }
+
+.stage { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+.view { display: flex; flex-direction: column; gap: 6px; min-width: 0; margin: 0; }
+.view figcaption { font-size: 0.82rem; color: var(--muted); }
+.view figcaption b { color: var(--ink); font-weight: 600; }
+.view svg { display: block; width: 100%; height: auto; border-radius: 4px; }
+
+.card { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.card .num { font: 700 1rem var(--display); letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.card h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); }
+.card .cue { font-size: 1.15rem; font-weight: 600; line-height: 1.35; }
+.card ul { margin: 0; padding-left: 1.1em; display: flex; flex-direction: column; gap: 6px; }
+.card .check { border-top: 1px solid var(--line); padding-top: 12px; color: var(--muted); }
+.card .check b { color: var(--ink); font-weight: 600; }
+.ctrl { display: flex; flex-wrap: wrap; gap: 8px; }
+.ctrl button {
+  font: 600 1.05rem var(--display); letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 10px 16px; border-radius: 4px; cursor: pointer;
+  border: 1.5px solid var(--ink); background: transparent; color: var(--ink);
+}
+.ctrl button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.ctrl button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+
+.legend { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 0.85rem; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 7px; }
+.legend i { display: inline-block; flex: none; }
+.legend .ls { width: 22px; height: 5px; border-radius: 3px; background: var(--mark); }
+.legend .ln { width: 14px; height: 14px; border-radius: 50%; background: var(--suit); box-shadow: 0 0 0 1.5px var(--muted); }
+.legend .lf { width: 14px; height: 14px; border-radius: 50%; background: var(--suit-far); }
+.legend .lh { width: 0; height: 16px; border-left: 2px dashed var(--muted); }
+
+.more { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+.more section { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.more p { color: var(--muted); max-width: 60ch; }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.gears { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 16px; }
+.gears li { display: flex; gap: 10px; align-items: baseline; min-width: 0; }
+.gears .g { font: 700 1.3rem/1 var(--display); color: var(--accent); font-variant-numeric: tabular-nums; }
+.gears b { font-weight: 600; }
+.gears span { color: var(--muted); }
+.fish { display: grid; grid-template-columns: minmax(0, 150px) minmax(0, 1fr); gap: 16px; align-items: start; }
+.fish ul { margin: 0; padding-left: 1.1em; display: flex; flex-direction: column; gap: 6px; }
+
+.short { border-top: 1px solid var(--line); padding-top: 20px; display: flex; flex-direction: column; gap: 6px; }
+.short p { font: 600 clamp(1.2rem, 3.4vw, 1.6rem)/1.25 var(--display); letter-spacing: 0.02em; text-transform: uppercase; }
+.short p span { color: var(--muted); padding: 0 0.15em; }
+
+@media (max-width: 860px) {
+  .stage { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .more { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 620px) {
+  .seg { display: flex; width: 100%; }
+  .seg button { flex: 1 1 0; padding: 8px 4px; font-size: 0.98rem; letter-spacing: 0.05em; }
+  .steps { gap: 4px; }
+  .steps button { align-items: center; padding: 8px 0; }
+  .steps .t { display: none; }
+}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="intro">
+      <p class="eyebrow">Langrenn · klassisk</p>
+      <h1>Klassisk steg for steg</h1>
+      <p class="lede">De tre teknikkene du bruker mest i klassisk, vist fra siden. Velg teknikk, gå gjennom fasene én for én, eller se hele bevegelsen i flyt.</p>
+    </div>
+    <div class="pick">
+      <div class="seg" role="group" aria-label="Velg teknikk">
+        <button type="button" id="t-dia" aria-pressed="true" aria-label="Diagonalgang">Diagonalgang</button>
+        <button type="button" id="t-dp" aria-pressed="false" aria-label="Dobbelttak">Dobbelttak</button>
+        <button type="button" id="t-dpk" aria-pressed="false" aria-label="Dobbelttak med fraspark">Med fraspark</button>
+      </div>
+      <p class="when" id="when"></p>
+    </div>
+  </header>
+
+  <ol class="steps" id="steps"></ol>
+
+  <div class="stage">
+    <figure class="view">
+      <svg id="scene" viewBox="-200 -205 400 250" role="img" aria-label="Skiløper sett fra siden, på vei mot høyre"></svg>
+      <figcaption>Sett fra siden. Du går mot høyre.</figcaption>
+    </figure>
+    <div class="card" aria-live="polite">
+      <p class="num" id="c-num"></p>
+      <h2 id="c-title"></h2>
+      <p class="cue" id="c-cue"></p>
+      <ul id="c-list"></ul>
+      <p class="check" id="c-check"></p>
+      <div class="ctrl">
+        <button type="button" id="prev">Forrige</button>
+        <button type="button" id="play" class="primary">Spill av</button>
+        <button type="button" id="next">Neste</button>
+        <button type="button" id="flow" aria-pressed="false">I flyt</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <span><i class="ls"></i>Rød ski: der vekta er</span>
+    <span><i class="ln"></i>Mørk: siden nærmest deg</span>
+    <span><i class="lf"></i>Lys: den andre siden</span>
+    <span><i class="lh"></i>Stiplet linje: hofta</span>
+  </div>
+
+  <div class="more">
+    <section>
+      <h2>Hofta frem</h2>
+      <p>Det viktigste i all klassisk er hvor hofta er. Den stiplede linja skal treffe foten eller foran. Blir du sittende bak, får du ikke trykk ned i skia, og da glipper den.</p>
+      <div class="pair">
+        <figure class="view">
+          <svg id="mini-ok" viewBox="-120 -190 240 225" role="img" aria-label="Riktig: hofta er over foten idet du tråkker ned"></svg>
+          <figcaption><b>Riktig.</b> Hofta over foten, vekta rett ned.</figcaption>
+        </figure>
+        <figure class="view">
+          <svg id="mini-bad" viewBox="-120 -190 240 225" role="img" aria-label="Feil: hofta henger bak hælen og overkroppen er knekt"></svg>
+          <figcaption><b>Sitter bak.</b> Hofta bak hælen, knekk i midjen.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section>
+      <h2>Velg teknikk etter terrenget</h2>
+      <p>Tenk på teknikkene som gir. Bytt før du mister farten, ikke etter.</p>
+      <figure class="view">
+        <svg viewBox="0 0 600 170" role="img" aria-label="Terrengprofil som stiger mot høyre i fire soner, fra flatt til bratt">
+          <rect x="0" y="0" width="600" height="170" fill="var(--sky)"/>
+          <path d="M0 140 L150 140 L300 116 L450 72 L600 14 L600 170 L0 170 Z" fill="var(--snow)" stroke="var(--snow-edge)" stroke-width="2"/>
+          <g stroke="var(--pole)" stroke-width="1.5" stroke-dasharray="4 5" opacity="0.6">
+            <line x1="150" y1="20" x2="150" y2="140"/><line x1="300" y1="20" x2="300" y2="116"/><line x1="450" y1="20" x2="450" y2="72"/>
+          </g>
+          <g font-family="Sofia Sans Condensed, Arial Narrow, Arial, sans-serif" font-size="30" font-weight="700" fill="var(--suit)" text-anchor="middle">
+            <text x="75" y="118">1</text><text x="225" y="100">2</text><text x="375" y="66">3</text><text x="525" y="44">4</text>
+          </g>
+        </svg>
+      </figure>
+      <ol class="gears">
+        <li><span class="g">1</span><div><b>Dobbelttak</b><br><span>Flatt, slakt utfor og lett føre.</span></div></li>
+        <li><span class="g">2</span><div><b>Dobbelttak med fraspark</b><br><span>Slak motbakke og tregere føre.</span></div></li>
+        <li><span class="g">3</span><div><b>Diagonalgang</b><br><span>Motbakke, og når det går tungt.</span></div></li>
+        <li><span class="g">4</span><div><b>Fiskebein</b><br><span>Når det er for bratt til at skia fester.</span></div></li>
+      </ol>
+      <h3>Fiskebein</h3>
+      <div class="fish">
+        <figure class="view">
+          <svg viewBox="0 0 200 190" role="img" aria-label="Skispor i fiskebein sett ovenfra: skiene står i V oppover bakken">
+            <rect x="0" y="0" width="200" height="190" fill="var(--snow)" stroke="var(--snow-edge)" stroke-width="2"/>
+            <g stroke="var(--suit)" stroke-width="6" stroke-linecap="round">
+              <line x1="106" y1="170" x2="152" y2="134"/><line x1="94" y1="142" x2="48" y2="106"/>
+              <line x1="106" y1="114" x2="152" y2="78"/><line x1="94" y1="86" x2="48" y2="50"/>
+              <line x1="106" y1="58" x2="152" y2="22"/>
+            </g>
+            <path d="M100 150 L100 24 M92 36 L100 22 L108 36" fill="none" stroke="var(--mark)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 0"/>
+          </svg>
+          <figcaption>Sporene ovenfra. Pila peker oppover bakken.</figcaption>
+        </figure>
+        <ul>
+          <li>Skiene i V, med tuppene ut og hælene inn.</li>
+          <li>Kant skiene innover, så de biter.</li>
+          <li>Korte, kjappe steg i samme rytme som diagonalgang: motsatt arm og bein.</li>
+          <li>Hofta frem og blikket oppover bakken.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <div class="short">
+    <p class="eyebrow">Kortversjonen i sporet</p>
+    <p>Hofta frem <span>→</span> vekta på én ski <span>→</span> tråkk ned <span>→</span> skyv helt ut <span>→</span> gli</p>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- body model, centimetres, side view, x forward, y up, snow at y = 0 ---------- */
+  var THIGH = 45, SHIN = 45, TORSO = 55, UPPER = 30, FORE = 27, POLE = 150;
+
+  function arm(hand, pole, plant) { return { hand: hand, pole: pole || 0, plant: plant ? 1 : 0 }; }
+  function P(hip, lean, nFoot, fFoot, an, af, w) {
+    return { hip: hip, lean: lean, n: nFoot, f: fFoot, an: an, af: af, w: w };
+  }
+  function swap(p) { return { hip: p.hip, lean: p.lean, n: p.f, f: p.n, an: p.af, af: p.an, w: 1 - p.w }; }
+
+  // diagonalgang: half a stride, the near ski glides first and then kicks
+  var K1  = P([0, 92],  18, [5, 8],    [-62, 30], arm([-26, 110], 75),      arm([50, 128], 50),      1);
+  var K2  = P([0, 91],  20, [2, 8],    [-30, 14], arm([-20, 104], 70),      arm([62, 138], 0, true), 1);
+  var K3  = P([8, 86],  24, [0, 8],    [4, 9],    arm([10, 92], 62),        arm([38, 108], 0, true), 1);
+  var K3B = P([0, 88],  22, [-44, 10], [14, 8],   arm([36, 112], 55),       arm([-6, 100], 0, true), 0.35);
+  // dobbelttak
+  var A = P([6, 96],   12, [0, 8], [5, 8], arm([56, 154], 28),      arm([60, 154], 28),      0.5);
+  var B = P([10, 93],  22, [0, 8], [5, 8], arm([68, 140], 0, true), arm([72, 140], 0, true), 0.5);
+  var C = P([2, 90],   45, [0, 8], [5, 8], arm([52, 102], 0, true), arm([56, 102], 0, true), 0.5);
+  var D = P([0, 89],   58, [0, 8], [5, 8], arm([-4, 96], 76),       arm([0, 96], 76),        0.5);
+  // dobbelttak med fraspark: the near ski kicks
+  var E1 = P([6, 86],  26, [0, 8],    [3, 8],  arm([0, 90], 65),        arm([4, 90], 65),        0.95);
+  var E2 = P([4, 92],  16, [-58, 30], [6, 8],  arm([58, 150], 30),      arm([62, 150], 30),      0);
+  var E3 = P([8, 92],  22, [-28, 14], [2, 8],  arm([68, 139], 0, true), arm([72, 139], 0, true), 0.1);
+  // the common mistake
+  var BAD = P([-18, 80], 38, [2, 8], [8, 8], arm([12, 84], 62), arm([40, 102], 0, true), 0.5);
+
+  var TECH = {
+    dia: {
+      name: "Diagonalgang", flip: true,
+      when: "<b>Diagonalgang</b> bruker du i motbakke og når det går tungt. Motsatt arm og bein jobber sammen, som når du går.",
+      steps: [
+        { t: "Gli", title: "Gli på én ski",
+          cue: "Stå med hele vekta på én ski og la den gli.",
+          list: ["Hofta høyt og frem, over foten.", "Motsatt arm er fremme: glir du på høyre ski, er venstre arm foran."],
+          check: "Du klarer å gli et øyeblikk på én ski uten å vakle.",
+          frames: [{ p: K1, d: 80, dur: 800 }] },
+        { t: "Stavisett", title: "Stavisett og pendel",
+          cue: "Sett staven i mens det bakre beinet pendler frem.",
+          list: ["Hånda er foran deg i skulderhøyde, og staven peker skrått bakover.", "Beinet svinger avslappet frem, lavt over sporet."],
+          check: "Staven får tak med en gang, uten å gli bakover.",
+          frames: [{ p: K2, d: 60, dur: 600 }] },
+        { t: "Tråkk ned", title: "Samle og tråkk ned",
+          cue: "Frasparket starter når føttene er samlet.",
+          list: ["Bøy i ankel og kne, og tråkk rett ned så smøringen fester.", "Hofta skal være over foten. Henger den bak, glipper skia."],
+          check: "Skia står helt stille i sporet idet du sparker.",
+          frames: [{ p: K3, d: 70, dur: 600 }] },
+        { t: "Spark fra", title: "Spark fra og fall frem",
+          cue: "Spark kort og kjapt, og flytt hele vekta over på den nye skia.",
+          list: ["Skyv staven helt ut bak hofta.", "Fall frem på den nye skia. Ikke bli stående mellom skiene."],
+          check: "Du lander i gli på én ski, og så gjentar alt seg på den andre siden.",
+          frames: [{ p: K3B, d: 46, dur: 380 }, { p: swap(K1), d: 40, dur: 420 }] }
+      ]
+    },
+    dp: {
+      name: "Dobbelttak", flip: false,
+      when: "<b>Dobbelttak</b> bruker du på flatt, i slakt utfor og ellers når farten er høy. Kraften kommer fra magen og overkroppen, ikke bare armene.",
+      steps: [
+        { t: "Høyt", title: "Høy posisjon",
+          cue: "Reis deg helt opp, med hofta frem og hendene foran ansiktet.",
+          list: ["Vekta frem på forfoten, som om du er i ferd med å falle fremover.", "Albuene i omtrent 90 grader."],
+          check: "Du kjenner at du må sette i stavene for ikke å falle frem.",
+          frames: [{ p: A, d: 150, dur: 750 }] },
+        { t: "Stavisett", title: "Stavisett og fall frem",
+          cue: "Sett stavene i ved bindingene og legg kroppsvekta på dem.",
+          list: ["Stavene peker skrått bakover, ikke rett ned.", "Hold armene faste. Gir albuene etter nå, forsvinner kraften."],
+          check: "Du kjenner trykket i magen, ikke bare i armene.",
+          frames: [{ p: B, d: 40, dur: 380 }] },
+        { t: "Magen", title: "Trykk med magen",
+          cue: "Magen og overkroppen starter trykket. Armene følger etter.",
+          list: ["Bøy deg sammen som i en situp, og gi litt etter i knærne.", "Hendene går forbi knærne, tett inntil kroppen."],
+          check: "Overkroppen går ned før armene begynner å strekke seg.",
+          frames: [{ p: C, d: 80, dur: 480 }] },
+        { t: "Skyv ut", title: "Skyv ut bak",
+          cue: "Strekk armene helt ut bak hofta, og reis deg raskt opp igjen.",
+          list: ["Åpne hendene i slutten av taket.", "Jo fortere du er oppe i høy posisjon, jo lenger får du hvile i glien."],
+          check: "Hendene kommer forbi hofta på hvert tak.",
+          frames: [{ p: D, d: 80, dur: 420 }] }
+      ]
+    },
+    dpk: {
+      name: "Dobbelttak med fraspark", flip: true,
+      when: "<b>Dobbelttak med fraspark</b> bruker du i slak motbakke og når vanlig dobbelttak blir for tungt. Ett fraspark gir fart inn i hvert tak.",
+      steps: [
+        { t: "Tråkk ned", title: "Samle og tråkk ned",
+          cue: "Tråkk ned på én ski mens armene pendler frem.",
+          list: ["Armene svinger forbi hofta på vei frem, samtidig som du tråkker.", "Bøy i ankel og kne, som i diagonalgang."],
+          check: "Skia fester, og du får et tydelig skyv fremover.",
+          frames: [{ p: E1, d: 100, dur: 620 }] },
+        { t: "Spark fra", title: "Spark fra og strekk deg frem",
+          cue: "Ett kort fraspark, mens armene strekkes frem og opp.",
+          list: ["Du glir på den andre skia, med hofta høyt og frem.", "Kroppen er lang, fra bakre fot til hendene."],
+          check: "Du glir på én ski med begge hender foran ansiktet.",
+          frames: [{ p: E2, d: 55, dur: 420 }] },
+        { t: "Stavisett", title: "Stavisett og pendel",
+          cue: "Sett stavene i mens sparkbeinet pendler inn igjen.",
+          list: ["Legg vekta på stavene, som i vanlig dobbelttak.", "Beinet skal være fremme før taket er halvveis."],
+          check: "Føttene er samlet når overkroppen er på vei ned.",
+          frames: [{ p: E3, d: 50, dur: 420 }] },
+        { t: "Magen", title: "Trykk med magen",
+          cue: "Føttene samlet. Magen og overkroppen gjør jobben.",
+          list: ["Bøy deg sammen, og gi litt etter i knærne.", "Hendene går forbi knærne, tett inntil kroppen."],
+          check: "Taket kjennes likt som et vanlig dobbelttak.",
+          frames: [{ p: C, d: 80, dur: 480 }] },
+        { t: "Skyv ut", title: "Skyv ut, og bytt bein",
+          cue: "Fullfør taket bak hofta. Neste gang sparker du med det andre beinet.",
+          list: ["Åpne hendene i slutten av taket.", "Bytt sparkbein annenhver gang, så blir du like god på begge."],
+          check: "Rytmen er jevn: spark, tak, gli.",
+          frames: [{ p: D, d: 80, dur: 420 }] }
+      ]
+    }
+  };
+
+  /* ---------- helpers ---------- */
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  function mix(a, b, t) {
+    if (typeof a === "number") return lerp(a, b, t);
+    if (Array.isArray(a)) return a.map(function (v, i) { return mix(v, b[i], t); });
+    var o = {}; Object.keys(a).forEach(function (k) { o[k] = mix(a[k], b[k], t); }); return o;
+  }
+  function f1(n) { return Math.round(n * 10) / 10; }
+  function xy(p) { return f1(p[0]) + "," + f1(-p[1]); }           // flip y for SVG
+  function joint(a, b, l1, l2, sign) {                               // two-bone IK, sign +1 = counter-clockwise side
+    var dx = b[0] - a[0], dy = b[1] - a[1], d = Math.hypot(dx, dy);
+    if (d < 0.01) return a;
+    if (d >= l1 + l2) return [a[0] + dx * l1 / (l1 + l2), a[1] + dy * l1 / (l1 + l2)];
+    var a1 = (l1 * l1 - l2 * l2 + d * d) / (2 * d), h = Math.sqrt(Math.max(0, l1 * l1 - a1 * a1));
+    return [a[0] + dx * a1 / d + sign * (-dy / d) * h, a[1] + dy * a1 / d + sign * (dx / d) * h];
+  }
+  function stroke(points, w, color, extra) {
+    return '<polyline points="' + points.map(xy).join(" ") + '" fill="none" stroke="' + color + '" stroke-width="' + w + '" stroke-linecap="round" stroke-linejoin="round"' + (extra || "") + "/>";
+  }
+
+  /* ---------- the skier ---------- */
+  function leg(hip, foot, share, far) {
+    var col = far ? "var(--suit-far)" : "var(--suit)";
+    var knee = joint(hip, foot, THIGH, SHIN, 1);
+    var toe = [foot[0] + 13, foot[1] - 6];
+    var t = Math.asin(Math.min(0.5, Math.max(0, (toe[1] - 2) / 98)));
+    var tip = [toe[0] + 98 * Math.cos(t), toe[1] - 98 * Math.sin(t)];
+    var tail = [toe[0] - 97 * Math.cos(t), toe[1] + 97 * Math.sin(t)];
+    var up = [tip[0] + 9, tip[1] + 7];
+    var s = stroke([tail, tip, up], 4.5, far ? "var(--pole-far)" : "var(--pole)");
+    s += stroke([tail, tip, up], 4.5, "var(--mark)", ' stroke-opacity="' + f1(Math.pow(Math.min(1, Math.max(0, share) * 1.6), 1.2)) + '"');
+    s += stroke([hip, knee, foot], 11, col);
+    s += stroke([foot, toe], 9, col);
+    return s;
+  }
+  function armPole(sh, a, far) {
+    var col = far ? "var(--suit-far)" : "var(--suit)", pc = far ? "var(--pole-far)" : "var(--pole)";
+    var hand = a.hand, tip;
+    var ang = a.pole * Math.PI / 180;
+    var free = [hand[0] - POLE * Math.sin(ang), hand[1] - POLE * Math.cos(ang)];
+    if (a.plant > 0.5 || free[1] < 0) {
+      var h = Math.min(POLE, Math.max(0, hand[1]));
+      tip = [hand[0] - Math.sqrt(POLE * POLE - h * h), 0];
+    } else tip = free;
+    var el = joint(sh, hand, UPPER, FORE, -1);
+    var s = stroke([hand, tip], 2.2, pc);
+    var bx = lerp(tip[0], hand[0], 0.06), by = lerp(tip[1], hand[1], 0.06);
+    s += '<circle cx="' + f1(bx) + '" cy="' + f1(-by) + '" r="3.2" fill="' + pc + '"/>';
+    s += stroke([sh, el, hand], 8, col);
+    return s;
+  }
+  function skier(p) {
+    var r = p.lean * Math.PI / 180;
+    var sh = [p.hip[0] + TORSO * Math.sin(r), p.hip[1] + TORSO * Math.cos(r)];
+    var r2 = r * 0.55;
+    var head = [sh[0] + 18 * Math.sin(r2), sh[1] + 18 * Math.cos(r2)];
+    var s = "";
+    s += armPole(sh, p.af, true) + leg(p.hip, p.f, 1 - p.w, true);
+    s += stroke([p.hip, sh], 15, "var(--suit)");
+    s += '<circle cx="' + f1(head[0]) + '" cy="' + f1(-head[1]) + '" r="10.5" fill="var(--suit)"/>';
+    s += '<path d="M' + f1(head[0] - 10.5) + " " + f1(-head[1] - 1) + " A10.5 10.5 0 0 1 " + f1(head[0] + 10.5) + " " + f1(-head[1] - 1) + ' Z" fill="var(--mark)"/>';
+    s += leg(p.hip, p.n, p.w, false) + armPole(sh, p.an, false);
+    // plumb line from the hip
+    s += '<line x1="' + f1(p.hip[0]) + '" y1="' + f1(-p.hip[1]) + '" x2="' + f1(p.hip[0]) + '" y2="-1" stroke="var(--snow)" stroke-width="3.4" opacity="0.9"/>';
+    s += '<line x1="' + f1(p.hip[0]) + '" y1="' + f1(-p.hip[1]) + '" x2="' + f1(p.hip[0]) + '" y2="-1" stroke="var(--mark)" stroke-width="1.6" stroke-dasharray="5 4"/>';
+    s += '<circle cx="' + f1(p.hip[0]) + '" cy="' + f1(-p.hip[1]) + '" r="3.4" fill="var(--mark)" stroke="var(--snow)" stroke-width="1.2"/>';
+    return s;
+  }
+
+  /* ---------- the scene ---------- */
+  function tree(x, hgt) {
+    return '<path d="M' + f1(x) + " " + f1(-hgt) + " L" + f1(x + hgt * 0.22) + " " + f1(-hgt * 0.45) + " L" + f1(x + hgt * 0.1) + " " + f1(-hgt * 0.45) +
+      " L" + f1(x + hgt * 0.3) + " -4 L" + f1(x - hgt * 0.3) + " -4 L" + f1(x - hgt * 0.1) + " " + f1(-hgt * 0.45) + " L" + f1(x - hgt * 0.22) + " " + f1(-hgt * 0.45) + ' Z" fill="var(--tree)" opacity="0.55"/>';
+  }
+  var TREES = [[0, 78], [70, 56], [160, 92], [250, 64], [330, 84], [420, 58], [500, 74]];
+  function backdrop(gx, x0, w) {
+    var s = '<rect x="' + x0 + '" y="-205" width="' + w + '" height="205" fill="var(--sky)"/>';
+    s += '<path d="M' + x0 + " -40 Q" + (x0 + w * 0.25) + " -92 " + (x0 + w * 0.5) + " -58 T" + (x0 + w) + " -70 L" + (x0 + w) + " 0 L" + x0 + ' 0 Z" fill="var(--hill)"/>';
+    var span = 580;
+    TREES.forEach(function (t) {
+      var x = ((t[0] - gx * 0.35) % span + span) % span - 90 + x0;
+      s += tree(x, t[1]);
+    });
+    s += '<rect x="' + x0 + '" y="-4" width="' + w + '" height="49" fill="var(--snow)"/>';
+    s += '<line x1="' + x0 + '" y1="0" x2="' + (x0 + w) + '" y2="0" stroke="var(--snow-edge)" stroke-width="2"/>';
+    for (var i = 0; i < 9; i++) {
+      var tx = ((i * 60 - gx) % 540 + 540) % 540 - 70 + x0;
+      s += '<line x1="' + f1(tx) + '" y1="14" x2="' + f1(tx + 16) + '" y2="14" stroke="var(--snow-edge)" stroke-width="3" stroke-linecap="round"/>';
+    }
+    return s;
+  }
+  var scene = $("scene");
+  function draw(s) { scene.innerHTML = backdrop(s.gx, -200, 400) + skier(s.pose); }
+  function mini(id, pose) { $(id).innerHTML = backdrop(40, -120, 240) + skier(pose); }
+
+  /* ---------- state ---------- */
+  var tech = "dia", cur = 0, flip = false, state = { pose: K1, gx: 0 }, token = 0;
+  var playing = false, flow = false, holdTimer = null;
+  var rail = $("steps");
+
+  function steps() { return TECH[tech].steps; }
+  function side(p, fl) { return fl ? swap(p) : p; }
+  function endPose(i, fl) { var f = steps()[i].frames; return side(f[f.length - 1].p, fl); }
+  function prevPose(i) {
+    if (i > 0) return endPose(i - 1, flip);
+    return endPose(steps().length - 1, TECH[tech].flip ? !flip : flip);
+  }
+
+  function buildRail() {
+    rail.innerHTML = "";
+    steps().forEach(function (s, i) {
+      var li = document.createElement("li"), b = document.createElement("button");
+      b.type = "button"; b.id = "step-" + (i + 1);
+      b.setAttribute("aria-label", "Fase " + (i + 1) + ": " + s.title);
+      b.innerHTML = '<span class="n">' + (i + 1) + '</span><span class="t">' + s.t + "</span>";
+      b.addEventListener("click", function () { stop(); go(i, true); });
+      li.appendChild(b); rail.appendChild(li);
+    });
+  }
+  function card() {
+    var s = steps()[cur];
+    $("c-num").textContent = "Fase " + (cur + 1) + " av " + steps().length + " · " + TECH[tech].name;
+    $("c-title").textContent = s.title;
+    $("c-cue").textContent = s.cue;
+    $("c-list").innerHTML = s.list.map(function (x) { return "<li>" + x + "</li>"; }).join("");
+    $("c-check").innerHTML = "<b>Kjennetegn:</b> " + s.check;
+    Array.prototype.forEach.call(rail.querySelectorAll("button"), function (b, i) {
+      if (i === cur) b.setAttribute("aria-current", "step"); else b.removeAttribute("aria-current");
+      b.classList.toggle("done", i < cur);
+    });
+  }
+  function ease(t) { return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; }
+
+  function run(frames, linear, done) {
+    var my = ++token, i = 0;
+    function nextFrame() {
+      if (my !== token) return;
+      if (i >= frames.length) { if (done) done(); return; }
+      var f = frames[i++], to = { pose: side(f.p, flip), gx: state.gx + f.d };
+      if (reduce) { state = to; draw(state); nextFrame(); return; }
+      var from = state, t0 = performance.now(), dur = f.dur;
+      (function tick(now) {
+        if (my !== token) return;
+        var t = Math.min(1, (now - t0) / dur);
+        state = mix(from, to, linear ? t : ease(t)); draw(state);
+        if (t < 1) requestAnimationFrame(tick); else nextFrame();
+      })(t0);
+    }
+    nextFrame();
+  }
+  function go(i, animate, done) {
+    cur = i; card(); token++;
+    if (!animate) { state = { pose: endPose(i, flip), gx: state.gx }; draw(state); return; }
+    if (!flow || !playing) state = { pose: prevPose(i), gx: state.gx };
+    draw(state);
+    run(steps()[i].frames, flow && playing, done);
+  }
+  function advance(dir) {
+    var n = steps().length, i = cur + dir;
+    if (i >= n) { i = 0; if (TECH[tech].flip) flip = !flip; }
+    if (i < 0) { i = n - 1; if (TECH[tech].flip) flip = !flip; }
+    return i;
+  }
+  function stop() {
+    playing = false; clearTimeout(holdTimer);
+    $("play").textContent = "Spill av";
+  }
+  function loop(i) {
+    if (!playing) return;
+    go(i, true, function () {
+      if (!playing) return;
+      var wait = flow ? 0 : (reduce ? 2600 : 1500);
+      if (flow && reduce) wait = 700;
+      holdTimer = setTimeout(function () { loop(advance(1)); }, wait);
+    });
+  }
+  $("play").addEventListener("click", function () {
+    if (playing) { stop(); return; }
+    playing = true; $("play").textContent = "Pause";
+    loop(advance(1));
+  });
+  $("flow").addEventListener("click", function () {
+    flow = !flow; $("flow").setAttribute("aria-pressed", String(flow));
+    if (flow && !playing) { playing = true; $("play").textContent = "Pause"; loop(advance(1)); }
+  });
+  $("prev").addEventListener("click", function () { stop(); go(advance(-1), true); });
+  $("next").addEventListener("click", function () { stop(); go(advance(1), true); });
+  document.addEventListener("keydown", function (e) {
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    if (e.key === "ArrowRight") { stop(); go(advance(1), true); }
+    if (e.key === "ArrowLeft") { stop(); go(advance(-1), true); }
+  });
+
+  function setTech(t) {
+    tech = t; cur = 0; flip = false; stop();
+    ["dia", "dp", "dpk"].forEach(function (k) { $("t-" + k).setAttribute("aria-pressed", String(k === t)); });
+    $("when").innerHTML = TECH[t].when;
+    try { localStorage.setItem("teknikk", t); } catch (e) {}
+    buildRail(); go(0, false);
+  }
+  ["dia", "dp", "dpk"].forEach(function (k) { $("t-" + k).addEventListener("click", function () { setTech(k); }); });
+
+  mini("mini-ok", K3); mini("mini-bad", BAD);
+  var saved = "dia";
+  try { var v = localStorage.getItem("teknikk"); if (v && TECH[v]) saved = v; } catch (e) {}
+  setTech(saved);
+})();
+</script>
