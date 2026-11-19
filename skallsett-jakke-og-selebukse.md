@@ -81,6 +81,35 @@ Jakken er plagget som slites mest, fordi sekkestroppene gnir på skuldrene hver 
 
 **Jakt:** ingen av disse skal brukes på jakt (farge og lyd). Hogna-planen fra før står seg: fleece og vest nå, skall i vårsalget.
 
+## Beste pris på Bergans Y MountainLine Breathe 3L (sjekket 19.11.2026)
+
+**Selebukse, str. 52.** Den er utgått hos Bergans («Archive / Utsolgt»), og str. 52 er nesten borte.
+
+| Butikk | Pris | Str. 52 | Merknad |
+|---|---|---|---|
+| **[Bergzeit.de](https://www.bergzeit.de/p/bergans-herren-y-mountainline-breathe-3l-shell-bib-hose/1133983/)** | **365,20 €** (≈ 4 300–4 500 kr levert, med norsk mva) | **På lager** (bare 52 og 54 igjen) | **Billigst og har størrelsen. Kjøp nå** |
+| [Bergzeit.co.uk](https://www.bergzeit.co.uk/p/bergans-mens-y-mountainline-breathe-3l-shell-bib-trousers/1133983) | £328,68 | På lager | Dyrere enn .de |
+| [DNTbutikken](https://www.dntbutikken.no/bergans/129744/skallbukse-til-herre-bergans-y-mountainline-3l-pants-m-25333) | 5 499 kr (4 399 kr for medlemmer, −20 %) | Nei, bare 48 | – |
+| [Sportsnett](https://www.sportsnett.no/bergans-of-norway-375-y-mountainline-breathe-3l-shell-bib-p19507), Intersport, Sport 1, [Bergans](https://www.bergans.com/no/p/2578-y-mountainline-breathe-3l-shell-bib-pants-men) | 4 999–5 499 kr | Utsolgt | – |
+| [Sportfits](https://sportfits.eu/products/bergans-y-mountainline-breathe-3l-shell-bib-pants-men) | 423 € | Utsolgt | – |
+| FINN | – | Ingen herremodeller ute nå | Lagre søk |
+
+**Jakke, str. L eller XL**
+
+| Butikk | Pris | L / XL | Merknad |
+|---|---|---|---|
+| **Anton Sport + bonus** | 5 499 kr − 1 462 kr bonus = **4 037 kr kontant** | Sjekk i butikk (siden ga feil 429) | Billigst i dag, og Anton-prisen er lavere enn Bergans' egen pris. Bruker du bonusen her, kan den ikke brukes på hjelm eller montering |
+| **[DNTbutikken](https://www.dntbutikken.no/bergans/140382/skalljakke-til-herre-bergans-y-mountainline-3l-jkt-m-24616)** | 5 699 kr, **4 559 kr for medlemmer** (−20 %) | L og XL er listet, «1 på lager» | Et DNT-medlemskap gir også rabatt på hyttene på Høgruta |
+| [Bergans.com](https://www.bergans.com/no/p/2571-y-mountainline-breathe-3l-shell-jacket-men) | 5 699 kr | På lager | Kundeklubbkoden gir −15 % = 4 844 kr |
+| [Bergzeit.de](https://www.bergzeit.de/p/bergans-herren-y-mountainline-breathe-3l-shell-jacke/1133964/) | 498,95 € | L og XL på lager | ≈ 5 800 kr levert, så for dyrt |
+| [Sportsnett](https://www.sportsnett.no/bergans-of-norway-375-y-mountainline-breathe-3l-shell-jacket-m-p18214/dark-shadow-grey-xl-v96555), Intersport, Sport 1 | 5 699 kr | Utsolgt | – |
+
+**Plan:**
+1. **Bestill selebuksa i str. 52 fra Bergzeit.de nå.** Den er den siste i størrelsen og billigst. I kassen trekkes tysk mva fra, og norsk mva og tollgebyr kommer i tillegg. Er totalen over ca. 4 600 kr, vurder å vente på Black Week, men da kan 52 bli utsolgt.
+2. **Jakken haster ikke, fordi den finnes på lager mange steder.** Vent til Black Week 23.–30.11 med målpris ≤ 4 000 kr. Faller den ikke dit, er reserven Anton Sport med bonus (4 037 kr) eller DNT-medlemspris (4 559 kr).
+
+Settet koster da ca. **8 300–8 600 kr**. Det er ca. 1 000 kr mer enn med Stormstride på restsalg, men begge plaggene er da bekreftet å passe.
+
 ## Størrelse (181 cm, 88 kg). Prøvd 19.11
 
 - **Selebukse: str. 52 i Bergans Y MountainLine** (52 tilsvarer L). Bekreftet ved prøving.
