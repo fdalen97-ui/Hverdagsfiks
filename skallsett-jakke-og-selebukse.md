@@ -4,13 +4,13 @@
 
 ## Kort svar
 
-**Kjøp selebukse, ikke vanlig bukse. Kjøp jakke og bukse hver for seg, der hver av dem er billigst. Et matchende sett er ikke viktig.** Målet er under 7 500 kr for begge.
+**Kjøp selebukse, ikke vanlig bukse. Kjøp jakke og bukse hver for seg, der hver av dem er billigst. Et matchende sett er ikke viktig.** Målet er rundt 7 500 kr for begge.
 
 | Plagg | Førstevalg | Målpris | Reserve |
 |---|---|---|---|
 | **Jakke** | Brukt **Arc'teryx Rush GTX Pro, L** (FINN 480037206), hvis den fortsatt er ledig | ≤ 3 300 kr | **Rab Kinetic Alpine Stretch** (9/10 hos Fri Flyt, 4 999 kr). Kjøp på Black Week-tilbud, målpris ≤ 3 900 kr |
-| **Selebukse** | **Rab Kinetic Alpine Stretch Bib, L** | ≤ 4 000 kr | **Bergans Y MountainLine Breathe 3L Bib** (≤ 4 000 kr) eller brukt Norrøna Lyngen GTX med bib på FINN (≤ 2 500 kr) |
-| **Sum** | | **≈ 6 500–7 300 kr** | |
+| **Selebukse** | **Bergans Y MountainLine Breathe 3L Bib, L** (Fri Flyt 9/10) | ≤ 4 000 kr | **Rab Khroma Latok GTX Pro Bib** (9/10, komfort 10/10) hvis den kommer ned i ≤ 5 000 kr. Brukt Norrøna Møre GTX Salopette ≤ 3 500 kr |
+| **Sum** | | **≈ 7 300 kr** | |
 
 Bukser du ikke trenger nå: Hybrid Softshell-buksa og en egen Rabot-skallbukse. Én god selebukse dekker både Høgruta og vanlige toppturer.
 
@@ -33,17 +33,27 @@ Gjennomgangene av «bib vs pants» ender som regel slik: selebukse er best i dyp
 4. Snølås og åpning til støvlene som går over Scarpa Maestrale.
 5. Et tynt, luftig overparti (mesh eller stretch), ikke et helt skall opp til brystet.
 
-## Kandidatene
+## Kandidatene, med Fri Flyts karakterer
 
-| Modell | Type | Pris (ordinær → mål) | Styrker | Svakheter |
-|---|---|---|---|---|
-| **Rab Kinetic Alpine Stretch Bib** | 3L Pertex Shield, stretch | ca. 400 USD (≈ 4 300–5 500 kr i Norge, ikke bekreftet) → **≤ 4 000** | Samme stoff som jakken Fri Flyt ga «Passform og bevegelighet 10/10». Drop seat, kantbeskyttelse, Recco ([evo](https://www.evo.com/products/285071-rabr-kinetic-alpine-stretch-bibs-men-s); [Backcountry](https://www.backcountry.com/rab-kinetic-alpine-stretch-bib-pant-mens); [Bergzeit](https://www.bergzeit.us/p/rab-mens-kinetic-alpine-stretch-bib-trousers/1154130/)) | Slitestyrke (jakken fikk 5/10). Les [Fri Flyts test av selebuksa](https://www.friflyt.no/skiutstyr/skibukser/test-rab-kinetic-alpine-stretch-skibukse) på abonnementet ditt før du kjøper |
-| **Bergans Y MountainLine Breathe 3L Bib** | 3L Bega Breathe Pro | 469,95 € veil. (≈ 5 500 kr) → **≤ 4 000** | Integrerte gamasjer, brystlomme, fra samme serie som Breathe-jakken (9/10 hos Fri Flyt). Du vet at Bergans L passer deg ([Sportfits](https://sportfits.eu/products/bergans-y-mountainline-breathe-3l-shell-bib-pants-men); [Bergzeit](https://www.bergzeit.co.uk/p/bergans-mens-y-mountainline-breathe-3l-shell-bib-trousers/1133983)) | Egen membran uten uavhengig måling. Fri Flyt fant svakere vær- og pusteevne enn Gore-Tex på jakken |
-| **Brukt Norrøna Lyngen GTX + avtakbar bib** | Gore-Tex | FINN: 2 100 + 800 kr (L), 3 500 kr (L) i eldre annonser → **≤ 2 500** | Billigst. Bib kan tas av, så du får begge typene i ett ([FINN 448705599](https://www.finn.no/recommerce/forsale/item/448705599); [FINN 448651405](https://www.finn.no/448651405)) | Annonsene kan være borte. Kontroller sømtape og kantslitasje |
-| Rab Khroma Kinetic Bib | Proflex (softshell-aktig) | 4 499 kr ([rab.equipment](https://rab.equipment/no/khroma-kinetic-bib)) | Mykest og mest pustende | Mindre vanntett. Bedre som eneste bukse i tørt kaldt vær enn på Høgruta |
-| Patagonia Untracked / Stormstride | H2No | Untracked Bib 4 647 kr (−30 %) ([Patagonia](https://eu.patagonia.com/no/en/product/mens-untracked-ski-snowboard-bibs/29904.html)) | Stormstride-buksa er godt testet ([OutdoorGearLab](https://www.outdoorgearlab.com/reviews/snow-sports/ski-pants-men/patagonia-stormstride-pants); [Switchback](https://www.switchbacktravel.com/reviews/patagonia-stormstride-pants)) | Stormstride finnes bare som bukse, ikke bib. Untracked er laget for heis og er tung |
+Fri Flyt gir karakterer på totalt / topptur / frikjøring / komfort / slitestyrke ([Fri Flyt skibukser](https://www.friflyt.no/skiutstyr/skibukser)).
 
-**Rangering av buksene:** 1) Rab Kinetic Alpine Stretch Bib på tilbud, 2) Bergans Breathe Bib på tilbud, 3) brukt Lyngen med bib hvis det dukker opp en i L under 2 500 kr. Rab vinner på passform, stretch og drop seat. Bergans er et trygt valg hvis Rab ikke passer når du prøver.
+| Selebukse | Membran | Fri Flyt | Vekt (L) | Ordinær pris | Målpris | Vurdering |
+|---|---|---|---|---|---|---|
+| **Bergans Y MountainLine Breathe 3L Bib** | Bega Breathe Pro (3L) | **9** / 8 / 7 / 8 / 8 | – | ca. 5 500 kr (nypris oppgitt på [FINN](https://www.finn.no/449373881)) | **≤ 4 000** | **Beste kjøp for pengene.** Fri Flyt: «rimelig, myk og komfortabel, bra lomme til skredsøker, slitesterk». Puster og beskytter litt dårligere enn Gore-Tex. Du vet at Bergans L passer deg. Var −21 % i EU ([Sportfits](https://sportfits.eu/products/bergans-y-mountainline-breathe-3l-shell-bib-pants-men)). Brukt str. 50 (M) til 3 850 kr på FINN |
+| **Rab Khroma Latok GTX Pro Bib** | Gore-Tex Pro ePE + softshell over livet | **9** / 9 / 8 / **10** / 8 | 652 g | 6 999 kr | **≤ 5 000** | **Best totalt for Høgruta.** Glidelåser langs hele beinet fra magen til ankelen, Spectra-forsterkning ved ankelen, Recco. Fri Flyt: «det nærmeste vi har kommet softshell-komfort på alle skallbuksene vi har testet». Var −25 % i USA ([Backcountry](https://www.backcountry.com/rab-khroma-latok-gtx-bib-mens)). Ubrukt L på FINN til 6 000 kr er for dyrt ([FINN 442929294](https://www.finn.no/442929294)) |
+| **Norrøna Møre GTX Salopette** | Gore-Tex Pro | **9** / 9 / 9 / 8 / **9** | – | 6 990 kr | ≤ 3 500 brukt | Mest slitesterk og best vær, men litt stiv. Fri Flyt fant at den puster *bedre* enn softshellsøsteren Flex1. Brukt XL har ligget på FINN til 2 850 kr ([FINN 435899030](https://www.finn.no/435899030)) |
+| Rab Kinetic Alpine Stretch Bib | Pertex Shield stretch | Testet, men karakteren er ikke med i det du limte inn | – | ca. 400 USD | ≤ 4 000 | Les [testen](https://www.friflyt.no/skiutstyr/skibukser/test-rab-kinetic-alpine-stretch-skibukse) først. Jakken i samme stoff fikk 5/10 i slitestyrke |
+| Norrøna Møre Flex1 Bib | Softshell (Flex1) | 8 / 8 / 7 / 9 / 9 | 667 g | 3 499 kr | – | Deilig i tørr kulde, men «dårlig værbeskyttelse i våte forhold». I sammenligningstesten fikk innergamasjen hull etter seks dager. **Ikke for Høgruta** |
+| Arc'teryx Sabre Bib | Gore-Tex | 8 / 8 / 9 / 7 / 8 | 700 g (M) | 6 299 kr | – | Liten i størrelsene. Mer frikjøring enn topptur |
+| Mammut Haldigrat HS Bib | Egen membran | 7 / 7 / 7 / 9 / 8 | – | – | – | Svakere pusteevne og vær enn Gore-Tex, og «kjip gylf» |
+| Stellar Free Shell Bib 2.0, HH Ridge Infinity Bib, Orage Gibson | Ulike | Topptur 2–6 | 729–879 g | – | – | Frikjøringsbukser, for tunge og baggy til topptur. **Hopp over** |
+
+**Rangering:**
+1. **Bergans Breathe Bib** til ≤ 4 000 kr. Samme karakter som de dyre, til rundt halv pris.
+2. **Rab Khroma Latok GTX Pro Bib** hvis den kommer ned i ≤ 5 000 kr i Black Week. Gore-Tex Pro og glidelås langs hele beinet gjør den best til seks dager med vær og tung sekk. Den er verdt ca. 1 000 kr ekstra, men ikke 3 000.
+3. **Brukt Møre GTX Salopette** i L til ≤ 3 500 kr, hvis det dukker opp en.
+
+Fri Flyt skriver at softshell er blitt standard for toppturbukser og kan kombineres med en kraftigere skalljakke. Det stemmer for dagsturer i tørt vær. På Høgruta i påsken kan du ikke velge været, så en vanntett 3-lags selebukse er riktig valg når du bare skal ha én bukse.
 
 ## Jakken: hvorfor ikke kjøpe Rab-settet?
 
@@ -66,15 +76,16 @@ Rab-jakken er en svært god jakke for **pengene og for motbakke**: 10/10 opp, 10
 
 | Når | Gjør dette |
 |---|---|
-| **I dag–søndag 22.11** | Send melding til selgeren av Rush (FINN 480037206): fortsatt ledig, bilde av innerlapp og sømmer? Lagre søk på FINN etter «selebukse L» / «bib L» med Rab, Norrøna, Bergans og Arc'teryx. Sett prisvarsel på Prisjakt for Rab Kinetic Alpine Stretch Bib (4 000 kr) og jakke (3 900 kr) |
-| **Før 23.11** | Prøv Rab-selebuksa og Bergans Breathe Bib i L i butikk (Fjellsport, XXL eller Anton Sport). Skriv ned ordinærprisene, så du kan avsløre falske tilbud |
-| **Black Week 23.–30.11** | Kjøp selebuksa hvis den er ≤ 4 000 kr. Kjøper du jakken ny, kjøp den samtidig hvis den er ≤ 3 900 kr. Hos Bergans: 15 %-koden gjelder bare én ordre med varer til ordinær pris. Bruk den bare hvis Black Week-prisen er dårligere |
+| **I dag–søndag 22.11** | Send melding til selgeren av Rush (FINN 480037206): fortsatt ledig, bilde av innerlapp og sømmer? Lagre søk på FINN etter «selebukse L» / «bib L» med Rab, Norrøna, Bergans og Arc'teryx. Sett prisvarsel på Prisjakt for Bergans Breathe Bib (4 000 kr), Rab Khroma Latok Bib (5 000 kr) og Rab Kinetic Alpine Stretch-jakke (3 900 kr) |
+| **Før 23.11** | Prøv Bergans Breathe Bib og Rab Khroma Latok Bib i L i butikk (Fjellsport, XXL eller Anton Sport). Skriv ned ordinærprisene, så du kan avsløre falske tilbud |
+| **Black Week 23.–30.11** | Kjøp Khroma Latok hvis den er ≤ 5 000 kr, ellers Breathe Bib hvis den er ≤ 4 000 kr. Kjøper du jakken ny, kjøp den samtidig hvis den er ≤ 3 900 kr. Hos Bergans: 15 %-koden gjelder bare én ordre med varer til ordinær pris. Bruk den bare hvis Black Week-prisen er dårligere |
 | **Desember** | Ble ingenting kjøpt: kjøp med åpent kjøp i desember og bruk det som prisgaranti fram til romjulssalget. Test settet på dagsturer, slik at en eventuell retur skjer innen fristen (8.–18. januar) |
 
 **Når du får settet:** gå en tur i motbakke med sideglidelåsene åpne og en tur i vind med dem lukket. Sjekk at hetta går over hjelmen. Vask og reimpregner etter ca. 10 turdager. PFAS-fri impregnering mister evnen raskere.
 
 ## Usikkerhet
 
-- Norske priser på Rab-selebuksa og Bergans Breathe Bib er ikke bekreftet. Tallene over er regnet om fra USD/EUR eller er veiledende priser.
-- Fri Flyts egen test av Rab-selebuksa er ikke lest her (bak betalingsmur). Les den først. Trekker den mye for slitestyrke eller lufting, bytt til Bergans.
+- Ordinærprisene i norske butikker er ikke bekreftet. Bergans Breathe Bib (ca. 5 500 kr) bygger på en FINN-selger, og Khroma Latok (6 999 kr) og Møre (6 990 kr) bygger på Fri Flyt og en FINN-selger.
+- Karakterene er fra Fri Flyts tester, som du limte inn 19.11. Fri Flyts test av Rab Kinetic Alpine Stretch-selebuksa var ikke med.
+- Bergans' 15 %-kode på en samlet ordre med Breathe-jakke og -bib til full pris gir ca. 9 350 kr. Det er dyrere enn å kombinere brukt jakke med selebukse på tilbud.
 - FINN-annonsene kan være solgt.
