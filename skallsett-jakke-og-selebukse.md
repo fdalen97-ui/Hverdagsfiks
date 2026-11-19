@@ -8,8 +8,8 @@
 
 | Plagg | Førstevalg | Målpris | Reserve |
 |---|---|---|---|
-| **Jakke** | **Patagonia Stormstride, L** (Fri Flyt 10/10), på restsalg | ≤ 3 500 kr | Brukt **Arc'teryx Rush GTX Pro** (3 300 kr, FINN 480037206) eller **Bergans Breathe 3L** (9/10, ≤ 3 500 kr) |
-| **Selebukse** | **Sweet Crusader Gore-Tex Pro, L** (Fri Flyt 9/10 i alle kategorier, høyt liv med seler) hvis du finner den på outlet | ≤ 4 000 kr | **Bergans Y MountainLine Breathe 3L Bib** (9/10) til ≤ 4 000 kr. Rab Khroma Latok GTX Pro Bib (9/10) til ≤ 5 000 kr |
+| **Jakke** | **Patagonia Stormstride, XL** (Fri Flyt 10/10), på restsalg. Kjøp med åpent kjøp, og prøv L og XL hvis du kan | ≤ 3 500 kr | **Bergans Breathe 3L i XL** (9/10, ≤ 3 500 kr ny, ≤ 2 800 kr brukt) |
+| **Selebukse** | **Bergans Y MountainLine Breathe 3L Bib, str. 52** (Fri Flyt 9/10). Du har prøvd den, og den passer | ≤ 4 000 kr | **Sweet Crusader Gore-Tex Pro, L** (9/10 i alle kategorier) til ≤ 4 000 kr på outlet, men bare hvis du kan prøve den eller returnere den gratis |
 | **Sum** | | **≈ 7 500 kr** | |
 
 Bukser du ikke trenger nå: Hybrid Softshell-buksa og en egen Rabot-skallbukse. Én god selebukse dekker både Høgruta og vanlige toppturer.
@@ -51,8 +51,8 @@ Fri Flyt gir karakterer på totalt / topptur / frikjøring / komfort / slitestyr
 | Stellar Free Shell Bib 2.0, HH Ridge Infinity Bib, Orage Gibson | Ulike | Topptur 2–6 | 729–879 g | – | – | Frikjøringsbukser, for tunge og baggy til topptur. **Hopp over** |
 
 **Rangering:**
-1. **Sweet Crusader Gore-Tex Pro** til ≤ 4 000 kr på outlet. Den er Gore-Tex Pro og fikk 9 i alle kategorier, så til denne prisen er den det beste kjøpet. Sweet er norsk, så sjekk sweetprotection.com/no-outleten først.
-2. **Bergans Breathe Bib** til ≤ 4 000 kr. Den har samme totalkarakter, men egen membran. Du vet at Bergans L passer deg.
+1. **Bergans Breathe Bib, str. 52,** til ≤ 4 000 kr. 9/10 hos Fri Flyt, og du *vet* at den passer. En bukse som sitter godt, slår en litt bedre bukse som kanskje ikke gjør det.
+2. **Sweet Crusader Gore-Tex Pro, L,** til ≤ 4 000 kr på outlet. Den har Gore-Tex Pro og 9 i alle kategorier, så den er bedre i vått vær. Kjøp den bare hvis du kan prøve den eller returnere den gratis.
 3. **Rab Khroma Latok GTX Pro Bib** hvis den kommer ned i ≤ 5 000 kr i Black Week. Den har komfort 10/10 og glidelås langs hele beinet.
 4. **Brukt Møre GTX Salopette** eller **Crusader X Bib** i L til ≤ 2 500–3 500 kr, hvis det dukker opp en.
 
@@ -75,16 +75,19 @@ Jakken er plagget som slites mest, fordi sekkestroppene gnir på skuldrene hver 
 
 **Rangering:**
 1. **Patagonia Stormstride** til ≤ 3 500 kr. Det er den best testede jakken, og nå er den på restsalg. Ved kjøp fra EU kommer norsk mva og eventuelt fortollingsgebyr i tillegg. Regn ut totalprisen i kassen før du betaler.
-2. **Brukt Arc'teryx Rush GTX Pro** til 3 300 kr. Velg den hvis Stormstride ikke finnes i L, eller hvis du vil ha Gore-Tex Pro for slitestyrken.
-3. **Bergans Breathe 3L** til ≤ 3 500 kr ny, eller ≤ 2 500 kr brukt. Tryggest på størrelse, siden du har prøvd den.
+2. **Bergans Breathe 3L i XL** til ≤ 3 500 kr ny, eller ≤ 2 800 kr brukt (en XXL har ligget ute til 2 799 kr). Tryggest på størrelse, og den matcher selebuksa.
+3. **Brukt Arc'teryx Rush GTX Pro**, men bare i XL. Den på FINN er L.
 4. **Rab Kinetic Alpine Stretch** til ≤ 3 900 kr. Velg den bare hvis du mest skal gå dagsturer i godt vær.
 
 **Jakt:** ingen av disse skal brukes på jakt (farge og lyd). Hogna-planen fra før står seg: fleece og vest nå, skall i vårsalget.
 
-## Størrelse (181 cm, 88 kg)
+## Størrelse (181 cm, 88 kg). Prøvd 19.11
 
-- Jakke: **L** (bekreftet hos Bergans).
-- Selebukse: **L**, men sjekk at overdelen er lang nok i overkroppen. Gjør et dypt knebøy med selene stramt, og løft knærne som når du går i bratt motbakke. Stroppene skal ikke dra ned skuldrene.
+- **Selebukse: str. 52 i Bergans Y MountainLine** (52 tilsvarer L). Bekreftet ved prøving.
+- **Jakke: XL.** Bekreftet ved prøving. Det erstatter det tidligere rådet om L. Med XL er det plass til mellomlag og dun under, og ermene er lange nok når du tar stavtak.
+  - Stormstride: Fri Flyt sier den er stor i størrelsen, Switchback at den er trang. Bestill XL med åpent kjøp. Kjenner den romslig ut, bytt til L.
+  - Den brukte Rush-jakken på FINN (480037206) er i L og er sannsynligvis for liten. Den er ikke lenger aktuell, med mindre du prøver den først.
+  - Sweet og Rab: sjekk størrelsestabellen. Sweet oppgir L til 188 cm.
 - Prøv buksa med skistøvler. Snølåsen skal gå over Maestrale, og kanten skal ikke ligge mot bakken.
 - Prøv jakke og bib sammen med sekken og hoftebeltet på.
 
