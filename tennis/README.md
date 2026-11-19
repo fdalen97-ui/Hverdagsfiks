@@ -4,6 +4,8 @@ Notatene mine for å bli bedre i tennis. Jeg er høyrehendt og slår tohånds ba
 
 Hovedideen er at slaget begynner lenge før jeg treffer ballen. Står jeg riktig og er klar i god tid, blir selve slaget enkelt.
 
+**Se slaget:** [Slaget steg for steg](https://claude.ai/artifact/KH7SYZ1Bqb6rDHmrpaKU4Y) viser de åtte stegene ovenfra, med bane, kroppsstilling, racket og tyngdepunkt, for både forehand og backhand. Kilden ligger i [`slaget.html`](slaget.html).
+
 ## Ett slag fra start til slutt
 
 | # | Steg | Det jeg skal gjøre | Les mer |
@@ -21,6 +23,7 @@ Hovedideen er at slaget begynner lenge før jeg treffer ballen. Står jeg riktig
 
 ## Innhold
 
+- [Slaget steg for steg](https://claude.ai/artifact/KH7SYZ1Bqb6rDHmrpaKU4Y) – visualisering av hele slaget
 - [Posisjonering og klarstilling](posisjonering.md) – alt som skjer før slaget
 - [Forehand](forehand.md) – de fire huskereglene og treffpunktet
 - [Tohånds backhand](backhand.md) – det samme, speilvendt
