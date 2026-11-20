@@ -2,6 +2,19 @@
 
 *Sist oppdatert 19. november 2026. Bygger videre på [skalljakkerapporten](skalljakke-rapport-2027.md) og [Black Week-planen](black-week-2026.md).*
 
+## Status 20.11.2026: jakke kjøpt
+
+**Kjøpt:** Bergans Y MountainLine Bold 3L Shell Jacket Men, **XL**, **3 099 kr** (ordinær 6 199 kr, −50 %, bergans.com, fri frakt). Det er godt under målprisen på 3 500 kr og samme outletpris som [skalljakkerapporten](skalljakke-rapport-2027.md) pekte på. Når jakka kommer: test hetta over hjelmen, løft armene som ved stavtak med sekken på, og sjekk at du når sidelommene med hoftebeltet på. Gjør det før returfristen.
+
+**Gjenstår: selebukse i str. 52.** To aktuelle valg:
+
+| Selebukse | Pris | Fordel | Ulempe |
+|---|---|---|---|
+| **Bergans Y MountainLine Bold 3L Bib** (søsterbuksa til jakka) | Ordinær 5 499 kr. Laveste pris siste 3 mnd: 3 849 kr ([Prisjakt](https://www.prisjakt.no/product.php?p=12794982)) | Samme serie og membran som jakka. Kraftigere stoff enn Breathe. Kan være på outlet til ca. halv pris, slik jakka var | Ikke testet av Fri Flyt. Tyngre |
+| **Bergans Y MountainLine Breathe 3L Bib** | 365 € hos [Bergzeit.de](https://www.bergzeit.de/p/bergans-herren-y-mountainline-breathe-3l-shell-bib-hose/1133983/) (≈ 4 300–4 500 kr levert) | Fri Flyt 9/10. Str. 52 bekreftet å passe | Utgått i Norge. Bare 52 og 54 igjen hos Bergzeit |
+
+**Neste steg:** Sjekk bergans.com/outlet for **Bold 3L Bib i 52** i dag. Koster den ≤ 3 100 kr, kjøp den: matchende sett til ca. 6 200 kr totalt. Er den ikke på outlet, eller over ca. 3 800 kr, kjøp Breathe Bib i 52 fra Bergzeit.de, før 52 blir utsolgt. Prøv Bold Bib i 52 hvis du kan. Størrelsen bør være den samme som Breathe, men det er ikke bekreftet.
+
 ## Kort svar
 
 **Kjøp selebukse, ikke vanlig bukse. Kjøp jakke og bukse hver for seg, der hver av dem er billigst. Et matchende sett er ikke viktig.** Målet er rundt 7 500 kr for begge.
