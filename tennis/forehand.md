@@ -37,3 +37,4 @@ To bilder som betyr det samme, bruk det som fungerer:
 | Slår med armen | Sliten arm, lite fart | Huskeregel 3: hofta først, armen avslappet |
 | Sen på ballen | Treffer ved siden av kroppen | Åpne racketen tidligere, still meg opp bak ballen |
 | Stopper i treffet | Ballen går kort eller i nettet | Huskeregel 4: frys i fullføringen i 2 sekunder |
+| Vekten blir igjen på høyre bein | Treffer for langt bak, lener meg bakover, kort fullføring | Skyv fra høyre bein idet jeg starter svingen. Høyre hæl skal være løftet når jeg er ferdig |

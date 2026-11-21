@@ -21,6 +21,22 @@ Hovedideen er at slaget begynner lenge før jeg treffer ballen. Står jeg riktig
 
 **Kortversjonen å si til seg selv på banen:** midten → klar → åpne → løp → lad → slå foran → fullfør → midten.
 
+## Det jeg jobber med nå
+
+Sist oppdatert: 2026-11-21. Se [loggen](logg.md).
+
+**Fungerer:** Når venstre hånd peker mot ballen, står jeg riktigere når ballen kommer, og tyngdepunktet havner på høyre bein bak.
+
+**Jobber med:**
+
+1. **Vekten frem i slaget.** Jeg lader på høyre bein, men blir stående på det. Vekten skal fra høyre bein og frem idet jeg slår.
+2. **Treffe tidligere.** Jeg treffer ballen for langt bak.
+3. **Fullføre helt opp til bicepsen**, hver gang.
+
+De tre henger sammen: blir vekten igjen på bakre bein, kommer treffpunktet bak og fullføringen blir kort. Derfor er punkt 1 det jeg velger først. Øvelsene står under [Vekten frem og tidligere treff](øvelser.md#vekten-frem-og-tidligere-treff).
+
+**Huskeregel for dette:** pek → skyv fra høyre → treff foran → biceps.
+
 ## Innhold
 
 - [Slaget steg for steg](https://claude.ai/artifact/KH7SYZ1Bqb6rDHmrpaKU4Y) – visualisering av hele slaget
