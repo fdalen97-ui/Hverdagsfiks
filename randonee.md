@@ -1,6 +1,6 @@
 # Randonee: utstyr og turer
 
-Sist oppdatert: 2026-11-09 (rev. 3)
+Sist oppdatert: 2026-11-23 (rev. 4)
 
 ## Status
 
@@ -15,10 +15,38 @@ Sist oppdatert: 2026-11-09 (rev. 3)
 | Skredsøker, spade | Ja | |
 | Hjelm | Nei | Sweet Protection Ascender MIPS, målpris 1 500–1 850 kr (Black Week). Se `pristracker/` |
 | Staver | Nei | Målpris 900–1 100 kr (Black Week) |
-| Skall | Nei | Se [skalljakke-rapporten](skalljakke-rapport-2027.md): brukt Arc'teryx Rush (ca. 3 300 kr) eller Bergans Bold 3L (3 099 kr) |
+| Skall | **Jakke: Bergans Y MountainLine Bold 3L, XL** (kjøpt 20.11, 3 099 kr) | Selebukse str. 52 mangler, se [skallsett](skallsett-jakke-og-selebukse.md) |
 | Skredkurs | Nei | NF grunnkurs Hemsedal 5 100 kr, 9.–11.1 eller 23.–25.1.2027 |
 | Gammel ski | SGN Tylderingen + Marker Alpinist + G3-feller | Selges, legg ut for 5 500 kr og godta ca. 4 800–5 000 |
 | Anton-bonus | 1 462 kr (gyldig 12 mnd) | Bruk på montering eller hjelm/staver |
+
+## Handleliste (23.11.2026)
+
+**Må kjøpes, i denne rekkefølgen:**
+
+| # | Hva | Målpris | Hvor / når |
+|---|---|---|---|
+| 1 | **Selebukse, str. 52** | ≤ 3 100 kr (Bold Bib outlet) / ≈ 4 400 kr (Breathe Bib) | bergans.com/outlet, ellers [Bergzeit.de](https://www.bergzeit.de/p/bergans-herren-y-mountainline-breathe-3l-shell-bib-hose/1133983/). **Nå**, før 52 blir utsolgt |
+| 2 | **Skredkurs** (NF grunnkurs Hemsedal) | 5 100 kr | Book 9.–11.1 eller 23.–25.1.2027. **Nå**, kursene fylles opp |
+| 3 | **Hjelm, dobbeltsertifisert** (Sweet Ascender MIPS) | ≤ 1 700 kr | vpg.no med medlemsrabatt (opptil 30 % ≈ 1 610 kr), ellers Black Week. **Denne uka** |
+| 4 | **Staver** (Leki Helicon Lite eller BD med 20 %) | 900–1 100 kr | Black Week, til og med 30.11 |
+| 5 | **Hodelykt** med rødt lys | 400–800 kr | Black Diamond (−20 %), Ledlenser eller Black Week |
+| 6 | **Skibriller** | ≤ 900 kr | Alpina (−30 %) |
+| 7 | **Fellevoks** og 1–2 skistropper | ca. 300 kr | Sammen med staver/hodelykt |
+
+**Sjekk om du har (fra Høgruta-pakkelisten). Det som mangler, kjøpes i romjulssalget eller med medlemsrabatt:**
+- Ullundertøy, sett 2 (Janus Wool −30 %)
+- Lett dun- eller syntetjakke
+- Tynne hansker og varme votter
+- Lue, tynn og tykk buff, solbriller kat. 3–4
+- Skarejern som passer ATK Crest 10
+- Kart Jotunheimen 1:50 000 og kompass, bivvybag, termos, lakenpose, rep-sett
+
+**Ikke kjøp nå:** inReach (vurder til påske), skredsekk (vårsalg april eller senere), ny binding (bare hvis BSL > 305 mm, les av Maestrale-hælen først).
+
+**Selg:** SGN Tylderingen-pakken (5 500 kr, godta 4 800–5 000 kr). Det dekker det meste av listen over.
+
+**Sum:** punkt 1–7 ≈ 11 500–13 000 kr inkludert kurs.
 
 Plan for kjøp og datoer: [Black Week-strategi](black-week-2026.md).
 
