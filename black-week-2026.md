@@ -104,3 +104,19 @@ Svindel øker også rundt Black Week. Check Point registrerte 158 nye domener me
 Den viktigste innsikten er at bonusen og Black Week-rabattene ikke bør behandles som én pott. Superbonusen belønnet kjøp til full pris, mens Black Week belønner den som venter, og disse reglene utelukker langt på vei hverandre. Når kampanjene er uforenlige, er det ikke prosenten som avgjør, men hvor bonusen havner. Bonusen hører hjemme der Anton-gruppen ikke er dyrere enn markedet, for eksempel på verkstedtimen eller på en hjelm som Sportsnett setter ned. Kontantkjøpene hører hjemme der historikken viser en reell nedgang fra september. Med en snittrabatt på 6 % er Black Week ingen grunn til å utsette det som haster. Kurset har faste datoer, monteringen gjør skiene brukbare, og et skall til halv pris finnes allerede.
 
 Fredriks budsjett er derfor for det meste allerede bestemt. Kurs med utstyrsleie, montering og jakke koster rundt 9 500–10 000 kr kontant (mindre hvis bonusen kan dekke monteringen) og bør kjøpes eller bookes denne uken. Hjelm, staver og hodelykt koster samlet rundt 3 500–4 000 kr og er de eneste postene der det lønner seg å vente til 23.–30. november, så lenge han sjekker prisene mot historikken. Det ene spørsmålet som kan flytte rundt 500 kr, er om Anton Club lar ham bruke bonusen på salgsvarer eller tjenester. Det bør han få avklart over disken før han kjøper noe som helst.
+
+## Medlemsrabatter fra fordelsappen (skjermbilder 23.11.2026)
+
+Rabattene kommer fra en fordelsliste Fredrik har tilgang til. Vilkårene (om rabattene kan kombineres med Black Week, og om de gjelder salgsvarer) er ikke sjekket.
+
+| Butikk | Rabatt | Bruk det til | Regnestykke |
+|---|---|---|---|
+| **Vertical Playground (vpg.no)** | Opptil 30 % | **Hjelm**: Sweet Protection Ascender MIPS | 2 299 kr × 0,7 ≈ **1 610 kr**, under målprisen på 1 700–1 850 kr, *hvis* 30 % gjelder Sweet |
+| **Alpina** | 30 % | Skibriller (og eventuelt hjelm) | – |
+| **Janus Wool** | 30 % | Ullundertøy til Høgruta | – |
+| **Black Diamond** | 20 % | Staver, hansker/votter, hodelykt | – |
+| **Ledlenser** | Ukjent (avkuttet) | Hodelykt | – |
+| **ALFA** | 35 % | Fjellsko/vintersko | – |
+| Jerven, Craft, XC Sports, Helly Hansen, Olympia Sport, Crispi | 20–30 % | Mindre relevant nå | – |
+
+Ingen av disse fører Bergans Y MountainLine-selebuksa. Bergans er ikke på listen. Planen for selebuksa (Bold Bib på outlet eller Breathe Bib i 52 fra Bergzeit.de) står seg derfor.
