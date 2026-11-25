@@ -1,10 +1,10 @@
 # Prisrapport
 
-Sist oppdatert: **2026-11-24 16:54**. Oppdateres automatisk av GitHub Actions.
+Sist oppdatert: **2026-11-25 16:38**. Oppdateres automatisk av GitHub Actions.
 
 ## Varsler denne runden
 
-- 📉 **Hjelm Sweet Protection Ascender MIPS** falt fra 2 468 kr til **2 338 kr** hos Bergzeit (DE) (200 EUR) – https://www.bergzeit.de/p/sweet-protection-ascender-mips-skihelm/5037653/
+- Ingen nye varsler.
 
 ## Beste pris per vare
 
