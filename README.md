@@ -13,4 +13,5 @@ Personlige notater og beslutningsstøtte.
 - [Tennis](tennis/README.md) – hele slaget steg for steg, forehand, backhand, øvelser og logg
 - [Squash](squash/README.md) – slaget steg for steg, fra T-en og tilbake
 - [Padel](padel/README.md) – poenget steg for steg, fra glasset til nettet
+- [To do](todo.md) – løpende huskeliste
 - [Langrenn: klassisk teknikk](langrenn/README.md) – diagonalgang, dobbelttak og dobbelttak med fraspark, fase for fase
