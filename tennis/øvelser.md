@@ -27,6 +27,16 @@ Sortert etter stegene i [ett slag fra start til slutt](README.md#ett-slag-fra-st
 5. **Treff foran:** Partneren mater rolig. Jeg skal se treffpunktet foran kroppen på hvert slag. Blir jeg sen, åpner jeg racketen tidligere på neste ball.
 6. **Frys i fullføringen:** Etter hvert slag holder jeg posisjonen i 2 sekunder. Sjekk at bicepsen er ved haken og at jeg står i balanse.
 
+## Vekten frem og tidligere treff
+
+Det jeg jobber mest med nå, se [oversikten](README.md#det-jeg-jobber-med-nå). Alle øvelsene starter slik jeg allerede gjør: venstre hånd peker mot ballen og vekten er på høyre bein.
+
+1. **Fang ballen foran:** Partneren mater rolig. Jeg snur og lader som vanlig, men i stedet for å slå fanger jeg ballen med venstre hånd, så langt foran kroppen som jeg rekker. Der jeg fanger, er treffpunktet. 10 baller, så 10 slag der racketen møter ballen på samme sted.
+2. **Slipp og slå:** Jeg slipper ballen selv med venstre hånd, en armlengde foran og litt til høyre for fremste fot, og slår den etter spretten. Jeg bestemmer selv hvor ballen er, så den kan ikke komme bak meg.
+3. **Høyre hæl opp:** Skyggeslag og lette baller. Jeg skyver fra høyre bein idet jeg starter svingen, og fryser i fullføringen. Sjekk tre ting: høyre hæl er løftet, magen peker mot nettet, bicepsen er ved haken.
+4. **Steg inn:** Partneren mater kort. Jeg lader på høyre bein, tar et lite steg frem med venstre og slår idet vekten lander på venstre. Rekkefølgen er lad, steg, slå.
+5. **Kjegla:** Sett en kjegle ved siden av fremste fot. Ballen skal treffes foran kjegla. Partneren sier fra hver gang jeg treffer bak den.
+
 ## Backhand
 
 1. **Skyggeslag:** 20 tohånds backhand uten ball, sakte, med samme rekkefølge som på forehand.
