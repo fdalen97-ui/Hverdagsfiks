@@ -39,6 +39,12 @@ Sist oppdatert: 2026-11-02
 | Menneskets søken etter mening | Viktor Frankl | Kort, sterk, tidløs. Én kveld | [ ] |
 | Meditasjoner | Marcus Aurelius | Stoisisme i små biter. Fin på hytta | [ ] |
 
+## Kreativitet
+
+| Bok | Forfatter | Hvorfor | Status |
+|---|---|---|---|
+| Steal Like an Artist | Austin Kleon | Kort og konkret om å samle påvirkning og lage noe eget. [Notater](steal-like-an-artist.md) | [ ] påbegynt |
+
 ## Fra Goodreads
 
 _Legges inn når listen er limt inn._
