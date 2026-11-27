@@ -104,3 +104,38 @@ Svindel øker også rundt Black Week. Check Point registrerte 158 nye domener me
 Den viktigste innsikten er at bonusen og Black Week-rabattene ikke bør behandles som én pott. Superbonusen belønnet kjøp til full pris, mens Black Week belønner den som venter, og disse reglene utelukker langt på vei hverandre. Når kampanjene er uforenlige, er det ikke prosenten som avgjør, men hvor bonusen havner. Bonusen hører hjemme der Anton-gruppen ikke er dyrere enn markedet, for eksempel på verkstedtimen eller på en hjelm som Sportsnett setter ned. Kontantkjøpene hører hjemme der historikken viser en reell nedgang fra september. Med en snittrabatt på 6 % er Black Week ingen grunn til å utsette det som haster. Kurset har faste datoer, monteringen gjør skiene brukbare, og et skall til halv pris finnes allerede.
 
 Fredriks budsjett er derfor for det meste allerede bestemt. Kurs med utstyrsleie, montering og jakke koster rundt 9 500–10 000 kr kontant (mindre hvis bonusen kan dekke monteringen) og bør kjøpes eller bookes denne uken. Hjelm, staver og hodelykt koster samlet rundt 3 500–4 000 kr og er de eneste postene der det lønner seg å vente til 23.–30. november, så lenge han sjekker prisene mot historikken. Det ene spørsmålet som kan flytte rundt 500 kr, er om Anton Club lar ham bruke bonusen på salgsvarer eller tjenester. Det bør han få avklart over disken før han kjøper noe som helst.
+
+## Medlemsrabatter fra fordelsappen (skjermbilder 23.11.2026)
+
+Rabattene kommer fra en fordelsliste Fredrik har tilgang til. Vilkårene (om rabattene kan kombineres med Black Week, og om de gjelder salgsvarer) er ikke sjekket.
+
+| Butikk | Rabatt | Bruk det til | Regnestykke |
+|---|---|---|---|
+| **Vertical Playground (vpg.no)** | Opptil 30 % | **Hjelm**: Sweet Protection Ascender MIPS | 2 299 kr × 0,7 ≈ **1 610 kr**, under målprisen på 1 700–1 850 kr, *hvis* 30 % gjelder Sweet |
+| **Alpina** | 30 % | Skibriller (og eventuelt hjelm) | – |
+| **Janus Wool** | 30 % | Ullundertøy til Høgruta | – |
+| **Black Diamond** | 20 % | Staver, hansker/votter, hodelykt | – |
+| **Ledlenser** | Ukjent (avkuttet) | Hodelykt | – |
+| **ALFA** | 35 % | Fjellsko/vintersko | – |
+| Jerven, Craft, XC Sports, Helly Hansen, Olympia Sport, Crispi | 20–30 % | Mindre relevant nå | – |
+
+Ingen av disse fører Bergans Y MountainLine-selebuksa. Bergans er ikke på listen. Planen for selebuksa (Bold Bib på outlet eller Breathe Bib i 52 fra Bergzeit.de) står seg derfor.
+
+## Black Friday 27.11.2026: hva som er verdt å kjøpe i dag
+
+Prisene er hentet fra butikkenes egne sider 27.11. «Før» er butikkens oppgitte førpris, og sammenligningen er gjort mot målprisene i denne planen og mot pristrackerens historikk.
+
+| # | Vare | Pris i dag | Mål | Dom |
+|---|---|---|---|---|
+| 1 | **Staver: Black Diamond Traverse** (100–140 eller 100–155 cm) | **649 kr** hos [Outnorth](https://www.outnorth.com/no/varemerker/black-diamond/black-diamond-traverse-ski-poles-desert-sky-FS637229) (før 999, −35 %). 729 kr hos Fjellsport | 900–1 100 | **Kjøp.** 250 kr under målet. Velg 155 cm hvis den finnes (181 cm høy) |
+| 2 | **Selebukse: Bergans Breathe 3L Bib, str. 52** | **354,20 €** hos [Bergzeit.de](https://www.bergzeit.de/p/bergans-herren-y-mountainline-breathe-3l-shell-bib-hose/1133983/) (ned fra 365,20 € 19.11), ≈ 4 400–4 600 kr levert | ≤ 4 000 | **Kjøp.** Over målet, men det finnes ikke noe billigere alternativ: Bergans har arkivert både Breathe Bib og Bold Bib (utsolgt), og Bold Bib er utsolgt hos Bergzeit og Sportfits. Bare 52 og 54 er igjen |
+| 3 | **Hjelm: Sweet Ascender MIPS** | **1 724 kr** medlemspris hos [Sportsnett](https://www.sportsnett.no/sweet-protection-122-ascender-mips-helmet-p10120/matte-burning-orange-m-l-v85667) (ordinær 2 299). «VPG-pris» 1 599–1 724 kr hos [vpg.no](https://www.vpg.no/Sweet-Ascender-MIPS-Helmet/401767/), men få størrelser | 1 700–1 850 | **Kjøp**, når hodet er målt (S/M 53–56, M/L 56–59, L/XL 59–61 cm). Sportsnett er i Anton-gruppen, så eventuell bonus kan brukes |
+| 4 | **Bold-jakka (allerede kjøpt for 3 099 kr)** | 3 099 kr, merket «Outlet». Koden **BLACK26** skal gi 20 % ekstra = ca. **2 479 kr** | – | **Hent ut ca. 620 kr:** be Bergans om prisjustering, eller bestill på nytt og returner den første. Ikke bekreftet i handlekurv |
+| 5 | Hodelykt: Petzl Actik Core | 839 kr hos [Fjellsport](https://www.fjellsport.no/merker/petzl/petzl-actik-core-black-P481-3905) (før 1 159, −28 %). Outnorth 1 085 kr. Alpinstore ca. 700 kr (60 €) tidligere i november | 700 | **Vent / valgfritt.** Over målet. Kjøp bare hvis du trenger den før jul |
+| 6 | Staver: Leki Helicon Lite (110–145 cm) | 879 kr hos Outnorth (før 1 099) | 900–1 100 | Greit, men Traverse er billigere og like god |
+
+**Ikke tilbud i dag:** Ascender MIPS hos Sweet Protection selv, Sport 1 og Fjellsport (2 299 kr). Sweets egen nettbutikk oppgir 2 299 kr som laveste pris siste 30 dager. Bergans Breathe-jakke (4 549 kr) trengs ikke.
+
+**Sum hvis du kjøper 1–3 i dag:** ca. 6 800–7 000 kr, minus ca. 620 kr hvis prisjusteringen på jakka går gjennom.
+
+**Kunne ikke sjekkes:** Anton Sports nettside (blokkerte henting), lager per størrelse hos Outnorth og Sportsnett, og om BLACK26 faktisk trekkes fra på Bold-jakka.
