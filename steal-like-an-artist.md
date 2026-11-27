@@ -2,7 +2,7 @@
 
 _10 Things Nobody Told You About Being Creative_
 
-Sist oppdatert: 2026-11-27 · Status: kapittel 1 lest
+Sist oppdatert: 2026-11-27 · Status: kapittel 2 påbegynt
 
 > «Immature poets imitate; mature poets steal; bad poets deface what they take, and good poets make it into something better, or at least something different. The good poet welds his theft into a whole of feeling which is unique, utterly different from that from which it was torn.»
 > – T.S. Eliot
@@ -87,17 +87,38 @@ Metode for å studere et fagfelt uten å sette det i halsen:
 - **Ha en swipe-fil:** en mappe for det du «stjeler» fra andre. Digital eller analog spiller ingen rolle: utklippsbok eller bilder med mobilen. Ser du noe verdt å stjele, legg det i fila. Trenger du inspirasjon, åpne den.
 - Journalister kaller det en **morgue file**, der du oppbevarer de døde tingene du senere gjenoppliver i ditt eget arbeid.
 
+> «It is better to take what does not belong to you than to let it lie around neglected.» – Mark Twain
+
+## 2. Ikke vent til du vet hvem du er før du begynner
+
+### Lag ting, kjenn deg selv
+
+- Hadde Kleon ventet til han visste hvem han var før han begynte å skape, ville han fortsatt sittet og prøvd å finne ut av seg selv i stedet for å lage ting.
+- **Det er gjennom å lage ting og gjøre jobben at vi finner ut hvem vi er.**
+- Er du klar? Begynn å lage ting.
+
+### Bløffsyndrom (imposter syndrome)
+
+- Det er naturlig å være redd for å begynne.
+- **Bløffsyndrom** er utbredt blant utdannede folk. Klinisk definisjon: et psykologisk fenomen der man ikke klarer å internalisere egne prestasjoner. Du føler deg som en bløff som bare improviserer og ikke aner hva du driver med.
+- Men: **ingen av oss vet det.** Spør hvem som helst som gjør virkelig kreativt arbeid. De vet ikke hvor de gode tingene kommer fra, de bare møter opp og gjør jobben sin hver dag.
+
+### Fake it till you make it
+
+- Har du hørt om *dramaturgi*? _(fortsetter)_
+
 ## Prøv dette
 
 - [ ] Velg én person å klatre fra, og finn tre personer vedkommende ble påvirket av.
 - [ ] Opprett en swipe-fil (f.eks. en egen mappe i bildeappen eller et notat).
 - [ ] Ha alltid notatbok og penn i jakka.
 - [ ] Rydd i «input»: hva i feeden, spillelisten og bokhylla er søppel inn?
+- [ ] Begynn på noe nå, i stedet for å vente til du «vet hva du er».
 
 ## Kapitler
 
 1. Steal like an artist ✅
-2. Don't wait until you know who you are to get started
+2. Don't wait until you know who you are to get started ⏳
 3. Write the book you want to read
 4. Use your hands
 5. Side projects and hobbies are important
