@@ -15,9 +15,12 @@
       "kategori": "Skalljakke",
       "prioritet": 1,
       "maalpris": 2800,
-      "notat": "Outlet, str. L. Benchmark for ny jakke.",
+      "notat": "Kjøpt 20.11 i XL for 3 099 kr. Følges for prisjustering (BLACK26 gir 20 % ekstra på outlet til 30.11).",
       "kilder": [
-        {"butikk": "Bergans", "url": "https://www.bergans.com/no/p/3086-y-mountainline-bold-3l-shell-jacket-men"}
+        {
+          "butikk": "Bergans",
+          "url": "https://www.bergans.com/no/p/3086-y-mountainline-bold-3l-shell-jacket-men"
+        }
       ]
     },
     {
@@ -27,7 +30,18 @@
       "maalpris": 1850,
       "notat": "Str. M/L. Bergzeit er tysk pris uten norsk mva/frakt.",
       "kilder": [
-        {"butikk": "Bergzeit (DE)", "url": "https://www.bergzeit.de/p/sweet-protection-ascender-mips-skihelm/5037653/"}
+        {
+          "butikk": "Bergzeit (DE)",
+          "url": "https://www.bergzeit.de/p/sweet-protection-ascender-mips-skihelm/5037653/"
+        },
+        {
+          "butikk": "Sportsnett (medlemspris)",
+          "url": "https://www.sportsnett.no/sweet-protection-122-ascender-mips-helmet-p10120/matte-burning-orange-m-l-v85667"
+        },
+        {
+          "butikk": "VPG",
+          "url": "https://www.vpg.no/Sweet-Ascender-MIPS-Helmet/401767/"
+        }
       ]
     },
     {
@@ -36,8 +50,51 @@
       "prioritet": 2,
       "maalpris": 700,
       "kilder": [
-        {"butikk": "Outnorth", "url": "https://www.outnorth.com/no/varemerker/petzl/petzl-actik-core-red-P481-3903"},
-        {"butikk": "Alpinstore", "url": "https://www.alpinstore.com/no/625055-petzl-lampe-actik-core-rd-.html"}
+        {
+          "butikk": "Outnorth",
+          "url": "https://www.outnorth.com/no/varemerker/petzl/petzl-actik-core-red-P481-3903"
+        },
+        {
+          "butikk": "Alpinstore",
+          "url": "https://www.alpinstore.com/no/625055-petzl-lampe-actik-core-rd-.html"
+        },
+        {
+          "butikk": "Fjellsport",
+          "url": "https://www.fjellsport.no/merker/petzl/petzl-actik-core-black-P481-3905"
+        }
+      ]
+    },
+    {
+      "navn": "Selebukse Bergans Y MountainLine Breathe 3L Bib",
+      "kategori": "Skallbukse",
+      "prioritet": 1,
+      "maalpris": 4000,
+      "notat": "Str. 52. Bergzeit er tysk pris; levert til Norge ca. 4 400–4 600 kr.",
+      "kilder": [
+        {
+          "butikk": "Bergzeit (DE)",
+          "url": "https://www.bergzeit.de/p/bergans-herren-y-mountainline-breathe-3l-shell-bib-hose/1133983/"
+        },
+        {
+          "butikk": "Bergans",
+          "url": "https://www.bergans.com/no/p/2578-y-mountainline-breathe-3l-shell-bib-pants-men"
+        }
+      ]
+    },
+    {
+      "navn": "Staver Black Diamond Traverse",
+      "kategori": "Topptur",
+      "prioritet": 1,
+      "maalpris": 900,
+      "kilder": [
+        {
+          "butikk": "Outnorth",
+          "url": "https://www.outnorth.com/no/varemerker/black-diamond/black-diamond-traverse-ski-poles-desert-sky-FS637229"
+        },
+        {
+          "butikk": "Fjellsport",
+          "url": "https://www.fjellsport.no/turutstyr/ski-utstyr/staver/teleskopstaver/black-diamond-traverse-ski-poles-desert-sky-FS637229"
+        }
       ]
     },
     {
@@ -47,7 +104,10 @@
       "maalpris": 2000,
       "notat": "Allerede kjøpt for 2 699 kr. Faller prisen mye før du klipper fellene, kan du vurdere retur.",
       "kilder": [
-        {"butikk": "Fjellsport", "url": "https://www.fjellsport.no/merker/pomoca/pomoca-tour-explore---r2c-130mm-yellow-FS260067"}
+        {
+          "butikk": "Fjellsport",
+          "url": "https://www.fjellsport.no/merker/pomoca/pomoca-tour-explore---r2c-130mm-yellow-FS260067"
+        }
       ]
     }
   ]
